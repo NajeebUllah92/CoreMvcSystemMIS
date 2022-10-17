@@ -1,0 +1,146 @@
+﻿.table_sno {
+    text-align:center;
+    width:20px;
+}
+.table_header {
+    height: auto;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(lightgray, #cabfbf, lightgray);
+}
+.table_numaric {
+    text-align:right;
+}
+.table_loading {
+    text-align: center;
+    font-weight:bold;
+    color:blue;
+}
+.table_footer {
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(lightgray, #C0C0C0, lightgray);
+}
+.table_page_info {
+    font-weight:bold;
+    color:blue;
+    text-align:left;
+    padding-top:5px;
+}
+.table_page_button_area {
+    text-align:right;
+}
+.table_no_data {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+.search_text_box {
+    height:33px;
+    font-size:13px;
+    border:0.5px solid lightblue;
+}
+.search_dropdown {
+    height: 33px;
+    font-size: 13px;
+    border: 0.5px solid lightblue;
+    width:150px;
+}
+.add_new_button {
+    border:0.5px solid blue;
+}
+.card_body_custom {
+    padding:0.25rem;
+}
+.card_footer_custom {
+   padding:.21rem;
+}
+.card_footer_custom_div {
+    text-align: right;
+    width: 100%;
+    margin-right: 10px;
+}
+.table_btn_previous {
+
+}
+.table_btn_next {
+}
+.modal_waiting {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('/images/wait.gif') 50% 50% no-repeat;
+}
+
+body.loading .modal_waiting {
+    overflow: hidden;
+}
+
+body.loading .modal_waiting {
+    display: block;
+}
+.text_box {
+    height: 33px;
+    margin-bottom: 0.2rem;
+    border: 0.5px solid lightblue;
+}
+.col_custom {
+    padding-right:5px;
+    padding-left:5px;
+}
+.label_custom {
+    margin-bottom:0.2rem;
+    font-weight:bold;
+}
+.warning_spam {
+    color:red;
+    font-style:italic;
+}
+.form-control:focus {
+    border-color: #86c5da;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.035) inset, 0px 0px 8px rgba(255, 100, 255, 0.3);
+}
+.success_messege {
+    color:forestgreen;
+    text-align:center;
+    font-weight:bold;
+    width:100%;
+    font-style:italic;
+}
+.warning_messege {
+    color: darkkhaki;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-style: italic;
+}
+.error_messege {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-style: italic;
+}
+.checkbox {
+    
+}
+.mapped_header_spam {
+    font-weight:bold;
+    color:blue;
+    border-bottom:double lightblue;
+    margin-left:10px;
+}
+.mapped_header_lable_spam {
+    font-weight: bold;
+    color: darkgrey;
+}
+.add_edit_lable {
+    font-weight: bold;
+    color: darkgrey;
+}
+.row_footer {
+
+}
+

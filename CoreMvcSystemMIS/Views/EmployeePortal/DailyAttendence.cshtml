@@ -1,0 +1,383 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "StudentsAttendence";
+}
+<title>NOWSHERA MEDICAL COLLEGE(NMC)</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="~/Attendencedropdown.css" rel="stylesheet" />
+<link href="~/Content/css/responsive.css" rel="stylesheet" />
+@*<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">*@
+<style>
+    table tr td span {
+        height: 30px;
+        float: right;
+    }
+
+    .Tdlbl {
+        width: 15%;
+        font-weight: 600;
+        color: black;
+        text-align:end;
+    }
+
+    .TdData {
+        width: 35%;
+        font-weight: bold;
+        font-style: normal;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        color: black;
+    }
+</style>
+<nav class="" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Attendence</li>
+        <li class="active breadcrumb-item" aria-current="page">Daily Attendence Sheet</li>
+    </ol>
+</nav>
+<nav class="breadcrumb" aria-label="breadcrumb">
+    <img src="~/Content/img/notification/3.jpg" style="width:60px;height:100%; border-radius:50%;margin-right:20px;" />
+    <table style="margin:0px;">
+        <tr>
+            <td class=" font-weight-bolder">Muhammad Siqaf</td>
+        </tr>
+        <tr style="font:50px;">
+            <td style="font-weight:500">Registration No : </td>
+            <td>12345</td>
+        </tr>
+    </table>
+</nav>
+<div class="mb-3 card">
+    @*<div class="card-header-tab card-header">
+            <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+                <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+                Employement Information
+            </div>
+        </div>*@
+    <div class="row">
+        <div class="col-lg-12" style="overflow-x: auto;padding-right:30px;padding-left:30px;">
+            <table style="width:100%; margin-top:15px; margin-bottom:15px;">
+                <tr>
+                    <td class="Tdlbl">Organization</td>
+                    <td class="TdData">
+                        <select class="form-control select2" asp-items="@ViewBag.organization">
+                            <option value="">Select Organization</option>
+                        </select>
+                    </td>
+                    <td class="Tdlbl">Program</td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2" asp-items="@ViewBag.Programe">
+                            <option value="">Select Program</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl">Class No</td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2" asp-items="@ViewBag.Class">
+                            <option value="">Select Class</option>
+                        </select>
+                    </td>
+                    <td class="Tdlbl">Teacher</td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2-search-choice" asp-items="@ViewBag.Teacher">
+                            <option value="">Select Teacher</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl">Academic Session</td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2" asp-items="@ViewBag.session">
+                            <option value="">Select Session</option>
+                        </select>
+                    </td>
+                    <td class="Tdlbl">Subject</td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="saab">C++</option>
+                            <option value="opel">Biology</option>
+                            <option value="audi">Organic Chemistry</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl">Group(Optional)</td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2" asp-items="@ViewBag.batch">
+                            <option value="">Select Batch</option>
+                        </select>
+                        @*<button class="btn btn-outline-success" style="width:50%;align-content:center;"><i class="fa-solid fa-check-circle"></i>View</button>*@
+                    </td>
+                    <td class="Tdlbl">Attendence Date</td>
+                    <td class="TdData">
+                        <input type="date" class="form-control"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl"></td>
+                    <td class="TdData">
+                        <button style="width: 60%; margin-left:13%;text-align:center;"><i class="fa-solid fa-check-circle"></i>  Submit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="margin-left:10px;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    @*<div class="col-lg-12">
+        <table class="table table-responsive table-borderless" style="width:100%; margin-top:15px;">
+            <thead>
+                <tr>
+                    <td class="Tdlbl">Sheet No<span>:</span></td>
+                    <td class="TdData">224-41</td>
+                    <td class="Tdlbl">College<span>:</span></td>
+                    <td class="TdData">Nowshera Medical College(NMC)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="Tdlbl">Academic Session<span>:</span></td>
+                    <td class="TdData">2021-22</td>
+                    <td class="Tdlbl">Attendance Date<span>:</span></td>
+                    <td class="TdData">26-Apr-22</td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl">Teacher<span>:</span></td>
+                    <td class="TdData">ADNAN MASOOD</td>
+                    <td class="Tdlbl">Subject<span>:</span></td>
+                    <td class="TdData">Pathalogy</td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl">Status<span>:</span></td>
+                    <td class="TdData">Pending</td>
+                    <td class="Tdlbl">Updated By<span>:</span></td>
+                    <td class="TdData">Waleed-27-APR-22</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>*@
+    <div class="col-lg-12">
+        <table class="table table-responsive-sm table-striped table-hover" style="width:100%;margin-bottom:15px" id="attendencetable">
+            <tbody class="table-bordered">
+                <tr class="bg-heavy-rain">
+                    <th>S.No</th>
+                    <th>Roll No</th>
+                    <th>Uni.Reg.No</th>
+                    <th>Student Name</th>
+                    <th>Sem/Year</th>
+                    <th>Program</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td style="color: blue;">100</td>
+                    <td class="unireg">2021-KMU-NMC-128</td>
+                    <td>SAMANA ALI MIRZA</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="1"><label>Present</label>
+                        <input type="radio" name="1"><label>Absent</label>
+                        <input type="radio" name="1"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td style="color: blue;">50</td>
+                    <td>2021-KMU-NMC-01</td>
+                    <td>AFIFA TARIQ</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="2"><label>Present</label>
+                        <input type="radio" name="2"><label>Absent</label>
+                        <input type="radio" name="2"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td style="color: blue;">52</td>
+                    <td>2021-KMU-NMC-06</td>
+                    <td>UZMA MANSOOR</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="3"><label>Present</label>
+                        <input type="radio" name="3"><label>Absent</label>
+                        <input type="radio" name="3"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td style="color: blue;">4</td>
+                    <td>2021-KMU-NMC-09</td>
+                    <td>MALAIKA AKHTAR</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="4"><label>Present</label>
+                        <input type="radio" name="4"><label>Absent</label>
+                        <input type="radio" name="4"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td style="color: blue;">54</td>
+                    <td>2021-KMU-NMC-12</td>
+                    <td>HUMAIRA HADI</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="5"><label>Present</label>
+                        <input type="radio" name="5"><label>Absent</label>
+                        <input type="radio" name="5"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td style="color: blue;">41</td>
+                    <td>2021-KMU-NMC-14</td>
+                    <td>ABDUL RAFEY ISHFAQ</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="6"><label>Present</label>
+                        <input type="radio" name="6"><label>Absent</label>
+                        <input type="radio" name="6"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td style="color: blue;">90</td>
+                    <td>2021-KMU-NMC-15</td>
+                    <td>AIMAN ALTAF</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="7"><label>Present</label>
+                        <input type="radio" name="7"><label>Absent</label>
+                        <input type="radio" name="7"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td style="color: blue;">81</td>
+                    <td>2021-KMU-NMC-17</td>
+                    <td>MUBEEN SOHAIL</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="8"><label>Present</label>
+                        <input type="radio" name="8"><label>Absent</label>
+                        <input type="radio" name="8"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td style="color: blue;">46</td>
+                    <td>2021-KMU-NMC-18</td>
+                    <td>AREESHA PERVAIZ</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="9"><label>Present</label>
+                        <input type="radio" name="9"><label>Absent</label>
+                        <input type="radio" name="9"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td style="color: blue;">2</td>
+                    <td>2021-KMU-NMC-30</td>
+                    <td>SHAMS ULLAH</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="10"><label>Present</label>
+                        <input type="radio" name="10"><label>Absent</label>
+                        <input type="radio" name="10"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td style="color: blue;">14</td>
+                    <td>2021-KMU-NMC-32</td>
+                    <td>RUKHSANA GUL</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="11"><label>Present</label>
+                        <input type="radio" name="11"><label>Absent</label>
+                        <input type="radio" name="11"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td style="color: blue;">8</td>
+                    <td>2021-KMU-NMC-36</td>
+                    <td>SANA IQBAL</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="12"><label>Present</label>
+                        <input type="radio" name="12"><label>Absent</label>
+                        <input type="radio" name="12"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td style="color: blue;">88</td>
+                    <td>2021-KMU-NMC-37</td>
+                    <td>MAREEHA SALEEM</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="13"><label>Present</label>
+                        <input type="radio" name="13"><label>Absent</label>
+                        <input type="radio" name="13"><label>Leave</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td style="color: blue;">74</td>
+                    <td>2021-KMU-NMC-</td>
+                    <td>NAYAB ISMAIL</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">MBBS</td>
+                    <td>
+                        <input type="radio" checked name="14"><label>Present</label>
+                        <input type="radio" name="14"><label>Absent</label>
+                        <input type="radio" name="14"><label>Leave</label>
+                    </td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#li1").addClass("mm-active");
+        $("#li2").removeClass("mm-active");
+        $("#li3").removeClass("mm-active");
+        $("#li4").removeClass("mm-active");
+        $("#li5").removeClass("mm-active");
+        $("#li6").removeClass("mm-active");
+        $("#li7").removeClass("mm-active");
+        $("#li8").removeClass("mm-active");
+        $("#li9").removeClass("mm-active");
+        $("#li10").removeClass("mm-active");
+        $("#li11").removeClass("mm-active");
+        $("#li12").removeClass("mm-active");
+    });
+</script>
+
+
+

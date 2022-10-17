@@ -1,0 +1,242 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        table thead tr td {
+            margin: 0px;
+        }
+
+        .table tbody tr td {
+            font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+            color: black;
+        }
+
+        #tdhead {
+            font-weight: bold;
+        }
+
+        #tdbody {
+            font-weight: 500;
+        }
+
+        #btnprint {
+            margin: auto;
+            padding: 0px;
+            font-family: Arial;
+            background-color: darkgray;
+            border: 2px solid lightgray;
+            font-weight: bold;
+        }
+
+        #icons {
+            font-size: 10px;
+        }
+
+        label {
+            border: none;
+            padding: 7px;
+            padding-top: 2px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 4px;
+            border-radius: 50px;
+            border-width: thick;
+            height: 25px;
+        }
+        /*            label:nth-child(odd) {
+                background-color: #f2f2f2;
+            }*/
+        #marginicon {
+            margin-right: auto;
+            border: 1px solid black;
+        }
+
+        @@media print {
+            #btnprint {
+                display: none;
+            }
+
+            #tblData {
+                margin-top: -60px;
+            }
+        }
+
+        @@media screen and (max-width: 767px) {
+            table thead tr td {
+                font-size: 10px;
+                line-height: normal;
+            }
+
+            table tbody tr td {
+                font-size: 10px;
+                line-height: normal;
+            }
+
+            #icons {
+                font-size: 10px;
+            }
+
+            label {
+                padding: 3px;
+                /*margin-top:20px;*/
+                font-size: 6px;
+                margin: 1px 1px;
+                border-radius: 50px;
+                border-width: thin;
+                height: 15px;
+                align-content: center;
+            }
+
+            #marginicon {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <button class="col-3" style="float:right;" id="btnprint" onclick="window.print()">Print</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table style="width: 100%;border: 1px solid black; line-height: 20px;" id="tblData">
+                    <thead>
+                        <tr style="background-color: #2A6176; color: white; border: 1px solid black;">
+                            <td style="padding-left: 10px; width: 20%;"> Sheet No</td>
+                            <td style="padding-left: 10px; width: 20%;"> 224-41</td>
+                            <td style="padding-left: 10px; width: 20%;"> College</td>
+                            <td style="padding-left: 10px; width: 40%;"> Nowshera Medical College(NMC)</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border: 1px solid black;color:  #2A6176;">
+                            <td style="padding-left: 10px;width:20%;"> Academic Session</td>
+                            <td style="padding-left: 10px; width: 20%;"> 2021-22</td>
+                            <td style="padding-left: 10px; width: 20%;"> Attendance Date</td>
+                            <td style="padding-left: 10px; width: 40%;"> 26-Apr-22</td>
+                        </tr>
+                        <tr style="border: 1px solid black;color:  #2A6176;">
+                            <td style="padding-left: 10px; width: 20%;"> Teacher</td>
+                            <td style="color: blue; padding-left: 10px; width: 20%;"> ADNAN MASOOD</td>
+                            <td style="padding-left: 10px; width: 20%;"> Subject</td>
+                            <td style="color: blue; padding-left: 10px; width: 40%;"> Pathalogy</td>
+                        </tr>
+                        <tr style="border: 1px solid black;">
+                            <td style="padding-left: 10px; width: 20%;"> Status</td>
+                            <td style="padding-left: 10px; width: 20%;"> Pending</td>
+                            <td style="padding-left: 10px; width: 20%;"> Updated By</td>
+                            <td style="padding-left: 10px; width: 40%;"> Waleed-27-APR-22</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="counter-box text-right" id="marginicon" style="padding-right:5px;">
+            <i class="fa-solid fa-user-group"><span style="display: inline; padding-left:5px">14</span></i>
+            <i class="fa-solid fa-person-circle-plus"><span style="display: inline; padding-left: 5px">Present:<span style="display:inline; padding-left:5px">11</span></span></i>
+            <i class="fa-solid fa-person-circle-minus"><span style="display: inline; padding-left: 5px">Absent:<span style="display:inline; padding-left:5px">2</span></span></i>
+            <i class="fa-solid fa-bed"><span style="display: inline; padding-left: 5px">Leave:<span style="display:inline; padding-left:5px">1</span></span></i>
+        </div>
+        <div class="row">
+            <div class="col-12 table-responsive-sm">
+                <table style="width:100%;border-collapse:collapse;border:1px solid black;text-align:center;">
+                    <thead>
+                        <tr style="background-color: #2A6176;color: white;line-height:30px;">
+                            <td style="border:1px solid black"> S.No</td>
+                            <td style="border:1px solid black ;"> Roll No</td>
+                            <td style="border:1px solid black;text-align:left;"> Uni.Reg.No</td>
+                            <td style="border: 1px solid black;text-align:left;"> Student Name</td>
+                            <td style="border:1px solid black"> Sem/Year</td>
+                            <td style="border:1px solid black"> Program</td>
+                            <td style="border:1px solid black"> Signature</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border:1px solid black"> 1</td>
+                            <td style="color: blue;border:1px solid black"> 100</td>
+                            <td class="unireg" style="border: 1px solid black;text-align: left;"> 2021-KMU-NMC-128</td>
+                            <td style="border: 1px solid black;text-align: left;"> SAMANA ALI MIRZA</td>
+                            <td style="border:1px solid black;"> 2</td>
+                            <td style="border:1px solid black"> MBBS</td>
+                            <td style="border:1px solid black">
+                                <label style="background-color:green;"><span>P</span></label>
+                                <label style="background-color:red; color: black;"><span>A</span></label>
+                                <label style="background-color:black; color: white;"><span>L</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black"> 2</td>
+                            <td style="color: blue;border:1px solid black;"> 50</td>
+                            <td style="border:1px solid black;text-align:left;"> 2021-KMU-NMC-01</td>
+                            <td style="border:1px solid black;text-align:left;"> AFIFA TARIQ</td>
+                            <td style="border:1px solid black"> 2</td>
+                            <td style="border:1px solid black"> MBBS</td>
+                            <td style="border:1px solid black">
+                                <label style="background-color:green;"><span>P</span></label>
+                                <label style="background-color:red; color: black;"><span>A</span></label>
+                                <label style="background-color:black; color: white;"><span>L</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black"> 3</td>
+                            <td style="color: blue;border:1px solid black"> 52</td>
+                            <td style="border:1px solid black;text-align:left;"> 2021-KMU-NMC-06</td>
+                            <td style="border:1px solid black;text-align:left;"> UZMA MANSOOR</td>
+                            <td style="border:1px solid black"> 2</td>
+                            <td style="border:1px solid black"> MBBS</td>
+                            <td style="border:1px solid black">
+                                <label style="background-color:green;"><span>P</span></label>
+                                <label style="background-color:red; color: black;"><span>A</span></label>
+                                <label style="background-color:black; color: white;"><span>L</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black"> 4</td>
+                            <td style="color: blue;border:1px solid black"> 4</td>
+                            <td style="border:1px solid black;text-align:left;"> 2021-KMU-NMC-09</td>
+                            <td style="border:1px solid black;text-align:left;"> MALAIKA AKHTAR</td>
+                            <td style="border:1px solid black"> 2</td>
+                            <td style="border:1px solid black"> MBBS</td>
+                            <td style="border:1px solid black">
+                                <label style="background-color:green;"><span>P</span></label>
+                                <label style="background-color:red; color: black;"><span>A</span></label>
+                                <label style="background-color:black; color: white;"><span>L</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid black"> 5</td>
+                            <td style="color: blue;border:1px solid black"> 54</td>
+                            <td style="border:1px solid black;text-align:left;"> 2021-KMU-NMC-12</td>
+                            <td style="border:1px solid black;text-align:left;"> HUMAIRA HADI</td>
+                            <td style="border:1px solid black"> 2</td>
+                            <td style="border:1px solid black"> MBBS</td>
+                            <td style="border:1px solid black">
+                                <label style="background-color:green;"><span>P</span></label>
+                                <label style="background-color:red; color: black;"><span>A</span></label>
+                                <label style="background-color:black; color: white;"><span>L</span></label>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

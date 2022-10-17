@@ -1,0 +1,438 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    #heading {
+        font-family: 'Arial Rounded MT';
+        font-weight:500;
+    }
+    #logoimg {
+        width: 100px;
+        height: 100px;
+    }
+    span {
+        line-height: 30px;
+    }
+    #btnprint{
+        margin:auto;
+        padding:0px;
+        font-family:Arial;
+        background-color:darkgray;
+        border:2px solid lightgray;
+        font-weight:bold;
+    }
+    #btnprint:hover{
+        opacity:80%;
+        }
+        @@media print {
+            #btnprint{display:none;}
+        #regno{display:none;}
+        .pageidentity{display:none;}
+        .container-fluid{margin-top:-60px;}
+    }
+    @@media screen and (max-width:800px) {
+        #logoimg {
+            width: 80px;
+            height: 80px;
+            position:absolute;
+            margin-left:200px;
+            padding-top:20px;
+        }
+        h5 {
+            font-size: 15px;
+        }
+
+        h6 {
+            font-size: 12px;
+        }
+        span {
+            font-size: 12px;
+        }
+    }
+    @@media screen and (max-width:500px) {
+        #logoimg {
+            display:none;
+        }
+
+        table thead tr th {
+            font-size: 7px;
+            line-height:normal;
+        }
+
+        table tbody tr td {
+            font-size: 8px;
+        }
+        table thead tr td {
+            font-size: 8px;
+        }
+        h5{
+            font-size:12px;
+        }
+        h6 {
+            font-size: 10px;
+        }
+        span {
+            font-size: 10px;
+            line-height:normal;
+        }
+        p{
+            font-size:xx-small;
+        }
+        #smallscreenconvert{
+            flex-direction:row;
+        }
+    }
+</style>
+<nav class="pageidentity" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Employee Payroll</li>
+    </ol>
+</nav>
+<nav class="breadcrumb" aria-label="breadcrumb"id="regno">
+    <img src="~/Content/img/notification/3.jpg" style="width:60px;height:100%; border-radius:50%;margin-right:20px;" />
+    <table style="margin:0px;">
+        <tr>
+            <td><b>Muhammad Siqaf</b></td>
+        </tr>
+        <tr style="font:50px;">
+            <td>Registration No : </td>
+            <td>12345</td>
+        </tr>
+    </table>
+</nav>
+
+<div class="container-fluid" style="color:black;background-color:white;">
+    <div class="row">
+        <div class="col-12">
+            <button class="col-3" style="float:right;" id="btnprint" onclick="window.print()">Print</button>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row" style="text-align:center">
+            <div class="col-12">
+                <div class="col-12" style="margin-top:10px;margin-bottom:20px;">
+                    <h5 id="heading">Government of Khyber Pakhtunkhwa </h5>
+                    <h6 id="heading">District Accounts Office Bannu</h6>
+                    <h6 id="heading">Monthly Salary Statement (Junuary-2022)</h6>
+                    <img src="~/Images/kpklogo.jpg" alt="Logo" id="logoimg" style="float:right;margin-top:-95px;" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive-sm">
+                    <table width="100%">
+                        <thead style="background-color: lightgray; padding-left: 5px; font-weight: bold;line-height:25px;">
+                        <tr>
+                            <th colspan="12">
+                            Personal Information of <small style="font-family: 'Sitka Heading'"><b>Mr</b></small> <small id="lblname" style="font-family: 'Sitka Heading';text-transform:uppercase;"><b>Muhammad Siqaf</b></small>
+                            d/w/s of
+                            <small id="lblfname" style="font-family: 'Sitka Heading'; text-transform:uppercase;padding-left:2px;"><b>Muhammad ALi Khan</b></small>
+                            </th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr style="border-top: 1px solid lightgray;">
+                                <td><b>Personnal Number</b></td>
+                                <td>123456789</td>
+                                <td><b>CNIC</b></td>
+                                <td>12345-6789345-8</td>
+                                <td><b>NTN</b></td>
+                                <td>xyz</td>
+                            </tr>
+                            <tr style="border-top: 1px solid lightgray;border-bottom: 1px solid lightgray;">
+                                <td><b>Date of Birth</b></td>
+                                <td>18-02-1970</td>
+                                <td><b>Gov. Service Entry</b></td>
+                                <td>03-07-2000</td>
+                                <td><b>Lenght of Service</b></td>
+                                <td><span>21<b>Y</b></span> <span>06<b>M</b></span> <span>30<b>D</b></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <table style="width: 100%; margin-top: 20px;">
+            <thead style="background-color:lightgray;">
+                <tr style="padding-left: 5px; line-height: 30px;">
+                    <th colspan="12" style="padding-left:5px;"><b>Employement Category :</b><small id="lblemployementcategory">Active Temporary</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6" style="width:50%"><b>Designation : </b><label id="lbldesignation">ASSISTANT PROFESSOR</label></td>
+                    <td colspan="6" style="text-align: center; width: 50%"><label id="lblprovince">80000782-GOVERNMENT OF KHYBER-PAKH</label></td>
+                </tr>
+                <tr>
+                    <td colspan="12"><b>DDO Code : </b><label id="lblddocode">BU4331-PRINCIPAL PSTGRUTE COLLEGE BANNU</label></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><b>Payroll Section : </b><label id="lblpayrollsection">001</label></td>
+                    <td colspan="3"><b>GPF Section : </b><label id="lblgpfsection">018</label></td>
+                    <td colspan="3"><b>Cash Center : </b><label id="lblcashcenter">xyz</label></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="width:25%;"><b>GPF/Account No : </b><label id="lblgpfaccno">CLMKD 00304</label></td>
+                    <td colspan="3" style="width:25%"><b>Interest Applied : </b><label id="lblinterestapplied">No</label></td>
+                    <td colspan="3" style="width:25%"><b>GPF Balance : </b><label id="lblgpfbalance">893,974.00</label></td>
+                    <td colspan="3" style="width:25%"><b>Vendor Number : </b><label id="lblvendornumber">xyz</label></td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 100%; margin-top: 20px;">
+            <thead>
+                <tr style="background-color: lightgray; line-height: 30px;">
+                    <th colspan="12" style="padding-left:5px;">
+                        <b>Pay and Allowances</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody style="font-family:Rockwell;font-size:15px">
+                <tr>
+                    <td colspan="3" style="width:25%">
+                        Pay Scale : <label id="lblpayscale">17</label><small><b> For </b></small><label id="lblpayscaleyear">2017</label>
+                    </td>
+                    <td colspan="3" style="width:25%">
+                        Pay Scale Type : <label id="lblpayscaletype">Civil</label>
+                    </td>
+                    <td colspan="3" style="width:25%">
+                        BPS : <label id="lblbps">18</label>
+                    </td>
+                    <td colspan="3" style="width:25%">
+                        Pay Stage : <label id="lblpaystage">17</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width:100%;border:1px;border-collapse:collapse;text-align:center;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-right:none;" width="5%"></th>
+                    <th style="border: 1px solid black; border-left:none;" width="30%">Wage Type</th>
+                    <th style="border: 1px solid black" width="20%">Amount</th>
+                    <th style="border: 1px solid black; border-right: none;" width="5%"></th>
+                    <th style="border: 1px solid black; border-left: none;" width="30%">Wage Type</th>
+                    <th style="border: 1px solid black" width="20%">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border:1px solid black" width="5%">0001</td>
+                    <td style="border: 1px solid black" width="25%">Basic Pay</td>
+                    <td style="border: 1px solid black" width="20%">87,140.00</td>
+                    <td style="border: 1px solid black" width="5%">1001</td>
+                    <td style="border: 1px solid black" width="25%">House Rent Allowance 45%</td>
+                    <td style="border: 1px solid black" width="20%">8,715.00</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black" width="5%">1210</td>
+                    <td style="border: 1px solid black" width="25%">Convey Allowance 2005</td>
+                    <td style="border: 1px solid black" width="20%">5,000.00</td>
+                    <td style="border: 1px solid black" width="5%">1947</td>
+                    <td style="border: 1px solid black" width="25%">Medical Allow 15%(16-22)</td>
+                    <td style="border: 1px solid black" width="20%">3,095.00</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black" width="5%">2148</td>
+                    <td style="border: 1px solid black" width="25%">15% Adhoc Relief All-2013</td>
+                    <td style="border: 1px solid black" width="15%">1,750.00</td>
+                    <td style="border: 1px solid black" width="5%">2199</td>
+                    <td style="border: 1px solid black" width="25%">Adhoc Relief Allow 10%</td>
+                    <td style="border: 1px solid black" width="15%">1,185.00</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black" width="5%">2211</td>
+                    <td style="border: 1px solid black" width="25%">Adhoc Relief All 2016 10%</td>
+                    <td style="border: 1px solid black" width="15%">6,069.00</td>
+                    <td style="border: 1px solid black" width="5%">2224</td>
+                    <td style="border: 1px solid black" width="25%">Adhoc Relief All 2017 10%</td>
+                    <td style="border: 1px solid black" width="15%">8,714.00</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black" width="5%">2247</td>
+                    <td style="border: 1px solid black" width="25%">Adhoc Relief All 2018 10%</td>
+                    <td style="border: 1px solid black" width="15%">8,714.00</td>
+                    <td style="border: 1px solid black" width="5%">2265</td>
+                    <td style="border: 1px solid black" width="25%">Adhoc Relief All 2019 05%</td>
+                    <td style="border: 1px solid black" width="15%">4,357.00</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black" width="5%">2309</td>
+                    <td style="border: 1px solid black" width="25%">Adhoc Relief All 2021 10%</td>
+                    <td style="border: 1px solid black" width="15%">8,714.00</td>
+                    <td style="border: 1px solid black" width="5%">2316</td>
+                    <td style="border: 1px solid black" width="25%">Teaching Allownce 2021</td>
+                    <td style="border: 1px solid black" width="15%">7,670.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-12">
+                <div style="background-color: lightgray;line-height:30px;padding-left:5px;">
+                    <span><b>Deductions-General</b></span>
+                </div>
+            </div>
+        </div>
+        <table style="width:100%;border:1px;border-collapse:collapse;text-align:center;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-right:none;" width="5%"></th>
+                    <th style="border: 1px solid black; border-left:none;" width="30%">Wage Type</th>
+                    <th style="border: 1px solid black" width="20%">Amount</th>
+                    <th style="border: 1px solid black; border-right: none;" width="5%"></th>
+                    <th style="border: 1px solid black; border-left: none;" width="30%">Wage Type</th>
+                    <th style="border: 1px solid black" width="20%">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border:1px solid black" width="5%">2018</td>
+                    <td style="border: 1px solid black" width="25%">DPF Subscription</td>
+                    <td style="border: 1px solid black" width="20%">-5,360.00</td>
+                    <td style="border: 1px solid black" width="5%">3501</td>
+                    <td style="border: 1px solid black" width="25%">Benevolent Fund</td>
+                    <td style="border: 1px solid black" width="20%">-1,500.00</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black" width="5%">3609</td>
+                    <td style="border: 1px solid black" width="25%">Income Tax</td>
+                    <td style="border: 1px solid black" width="15%">-5,801.00</td>
+                    <td style="border: 1px solid black" width="5%">3990</td>
+                    <td style="border: 1px solid black" width="25%">Emp.Edu.Fund KPK</td>
+                    <td style="border: 1px solid black" width="15%">-250.00</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black" width="5%">4004</td>
+                    <td style="border: 1px solid black" width="25%">R.Benefits & Death Comp:</td>
+                    <td style="border: 1px solid black" width="15%">-1,350.00</td>
+                    <td style="border: 1px solid black" width="5%"></td>
+                    <td style="border: 1px solid black" width="25%"></td>
+                    <td style="border: 1px solid black" width="15%">0.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-12">
+                <div style="line-height: 30px; background-color: lightgray; padding-left: 5px;">
+                    <span><b>Deductions-Loans and Advances</b></span>
+                </div>
+            </div>
+        </div>
+        <table style="width:100%;border:1px;text-align:center;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black;" width="10%">Loan</th>
+                    <th style="border: 1px solid black" width="45%">Description</th>
+                    <th style="border: 1px solid black;" width="15%">Principal Amount</th>
+                    <th style="border: 1px solid black;" width="15%">Deduction</th>
+                    <th style="border: 1px solid black" width="15%">Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid black" width="10%">6505</td>
+                    <td style="border: 1px solid black" width="45%">GPF Loan Principal Instal</td>
+                    <td style="border: 1px solid black" width="15%">840,000.00</td>
+                    <td style="border: 1px solid black" width="15%">-24,000.00</td>
+                    <td style="border: 1px solid black" width="15%">456,000.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width:100%;margin-top:20px;">
+            <thead style="background-color:lightgray">
+                <tr>
+                    <th colspan="4" width="100%">
+                        Deductions-Income Tax
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="15%"><b>Payable </b></td>
+                    <td width="30%"id="lblpayscale">90,701.25 <span><b>For</b></span> <small id="lblpayscaleyear">2017</small></td>
+                    <td width="30%"><b>Recovered Till JAN-2022 </b></td>
+                    <td width="25%"id="lblpayscaletype">39,027.00</td>
+                </tr>
+                <tr>
+                    <td width="15%"><b>Exempted </b></td>
+                    <td width="30%"id="lblbps">22,674.30</td>
+                    <td width="30%"style="width:25%"><b>Recoverable </b></td>
+                    <td width="25%"id="lblpaystage">28,999.95</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width:100%;margin-top:10px;">
+            <thead>
+                <tr>
+                    <th width="15%">Gross Pay(Rs.)</th>
+                    <td width="15%">151,123.00</td>
+                    <th width="15%">Deductions-(Rs.)</th>
+                    <td width="15%">-38,261.00</td>
+                    <th width="15%">Net Pay(Rs.)</th>
+                    <td width="15%">112,862.00</td>
+                </tr>
+            </thead>
+        </table>
+        <div class="row">
+            <div class="col-12">
+                <br />
+                <p><b>Payee Name : </b><span id="lblpayeename">SAAD ULLAH SHAH</span></p>
+                <p><b>Account Number : </b><span id="lblaccountnumber">PLS-104617-6</span></p>
+                <p><b>Bank Details : </b><span id="lblbankdetail">UNITED BANK LIMITED-210306 PREEDY, BANNU</span></p>
+            </div>
+        </div>
+        <table style="width:100%;margin-top:20px;">
+            <tbody>
+                <tr style="text-align:center;">
+                    <td width="5%"><b>Leaves</b></td>
+                    <td width="5%" id="leaves">5</td>
+                    <td width="20%"><b>Opening Balance</b></td>
+                    <td width="10%" id="openingbalance">63453</td>
+                    <td width="10%"><b>Availed</b></td>
+                    <td width="10%" id="availed">5</td>
+                    <td width="10%"><b>Earned</b></td>
+                    <td width="10%" id="earned">2655656</td>
+                    <td width="10%"><b>Balance</b></td>
+                    <td width="10%" id="balance">66565</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width:100%;margin-top:50px;font-family:'Franklin Gothic';">
+            <thead>
+                <tr style="background-color:lightgray;line-height:30px;">
+                    <th colspan="6" style="padding-left:5px;">
+                        <b>Parmanent Address : </b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>City</b></td>
+                    <td id="city">Lakki Marwat</td>
+                    <td><b>Domicile</b></td>
+                    <td id="domicile">Lakki marwat</td>
+                    <td><b>House-Status</b></td>
+                    <td id="housingstatus">Own</td>
+                </tr>
+                <tr>
+
+                    <td><b>Temp.Address</b></td>
+                    <td colspan="5" id="tempaddress">Shawal Plaza Ring Road Haji Camp,Peshawar</td>
+                </tr>
+                <tr>
+                    <td><b>Temp.City</b></td>
+                    <td id="city">Peshawar</td>
+                    <td><b>Email</b></td>
+                    <td id="email">abc@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

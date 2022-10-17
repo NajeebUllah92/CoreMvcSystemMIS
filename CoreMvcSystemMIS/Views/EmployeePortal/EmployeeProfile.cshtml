@@ -1,0 +1,210 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "EmployeeProfile";
+}
+<style>
+    tr {
+        height: 30px;
+    }
+
+    .Tdlbl {
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+        width: 17%;
+    }
+
+    .TdData {
+        font:30px;
+        font-weight:500;
+        width: 16%;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        color: black;
+    }
+    .Tdhead {
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+        min-width:15%;
+        max-width: 20%;
+    }
+    .Tdbody {
+        font: 30px;
+        font-weight: 500;
+        min-width:20%;
+        max-width: 30%;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        color: black;
+    }
+    @@media screen and (max-width: 767px) {
+        .Tdhead {
+            font-size:small;
+        }
+
+        .Tdbody {
+            font-size:small;
+        }
+        .Tdlbl {
+            font-size:small;
+        }
+
+        .TdData {
+            font-size:small;
+        }
+        nav{
+            font-size:xx-small;
+        }
+    }
+    @@media screen and (max-width: 576px) {
+        .Tdhead {
+            font-size: xx-small;
+        }
+
+        .Tdbody {
+            font-size: xx-small;
+        }
+
+        .Tdlbl {
+            font-size: xx-small;
+        }
+
+        .TdData {
+            font-size: xx-small;
+        }
+    }
+</style>
+<nav class="" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Employee Profile</li>
+    </ol>
+</nav>
+<nav class="breadcrumb" aria-label="breadcrumb">
+    <img src="~/Content/img/notification/3.jpg" style="width:60px;height:100%; border-radius:50%;margin-right:20px;" />
+    <table style="margin:0px;">
+        <tr>
+            <td class=" font-weight-bolder">Muhammad Siqaf</td>
+        </tr>
+        <tr style="font:50px;">
+            <td>Registration No : </td>
+            <td>12345</td>
+        </tr>
+    </table>
+</nav>
+@*<div><h6 style="margin-bottom:0px;"><b>Registration No : </b><label id="lblregistrationno" style="font-family:Cambria">12345</label></h6></div>*@
+<div class="mb-3 card">
+    <div class="card-header-tab card-header bg-heavy-rain">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient"> </i>
+            Personal Information
+        </div>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table class="table table-no-bordered " style="width:100%; margin-top:15px; margin-bottom:15px">
+            <tr>
+                <td class="Tdhead"style="border-top:none;  width:25%;">Employee Name</td>
+                <td class="Tdbody"style="border-top: none; width: 25%;">Muhammad Siqaf</td>
+                <td class="Tdhead"style="border-top: none; width: 25%;">Father Name</td>
+                <td class="Tdbody"style="border-top: none; width: 25%;">Muhammad Ali Khan</td>
+            </tr>
+            <tr>
+                <td class="Tdhead"style="width: 25%;">Gender</td>
+                <td class="Tdbody"style="width: 25%;">Male</td>
+                <td class="Tdhead"style="width: 25%;">D.O.B</td>
+                <td class="Tdbody"style="width: 25%;">1/10/1993</td>
+            </tr>
+            <tr>
+                <td class="Tdhead"style="width: 25%;">CNIC</td>
+                <td class="Tdbody"style="width: 25%;">12345-2546852-2</td>
+                <td class="Tdhead"style="width: 25%;">Nationality</td>
+                <td class="Tdbody"style="width: 25%;">Pakistani</td>
+            </tr>
+            <tr>
+                <td class="Tdhead"style="width: 25%;">Religion</td>
+                <td class="Tdbody"style="width: 25%;">Islam</td>
+                <td class="Tdhead"style="width: 25%;">Contact No</td>
+                <td class="Tdbody"style="width: 25%;">0344-2379539</td>
+            </tr>
+            <tr>
+                <td class="Tdhead"style="width: 25%;">E-mail</td>
+                <td class="Tdbody"style="width: 25%;">msiqaf@gmail.com</td>
+                <td class="Tdhead"style="width: 25%;">Blood Group</td>
+                <td class="Tdbody"style="width: 25%;">O+</td>
+            </tr>
+            <tr>
+                <td class="Tdhead"style="width: 25%;">Address</td>
+                <td colspan="3" class="Tdbody"style="width: 75%;">Khada Banda Tehsil and Post Office Takht-e-Nasrati Distt:Karak</td>
+            </tr>
+        </table>
+    </div>
+    <div class="card-header-tab card-header bg-heavy-rain">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Employement Information
+        </div>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table class="table table-no-bordered" style="width: 100%; margin-top: 15px; margin-bottom: 15px">
+            <tr>
+                <td class="Tdlbl"style="border-top:none;">Designation</td>
+                <td class="TdData"style="border-top:none;">Professor</td>
+                <td class="Tdlbl"style="border-top:none;">Category</td>
+                <td class="TdData"style="border-top:none;">XYZ</td>
+                <td class="Tdlbl"style="border-top:none;">H.O.D</td>
+                <td class="TdData"style="border-top:none;">Computer Science</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Grade</td>
+                <td class="TdData">17</td>
+                <td class="Tdlbl">Project</td>
+                <td class="TdData">XYZ</td>
+                <td class="Tdlbl">Department Alloted</td>
+                <td class="TdData">IT</td>
+            </tr>
+            <tr>
+
+                <td class="Tdlbl">Department (Cost Center)</td>
+                <td class="TdData">XYZ</td>
+                <td class="Tdlbl">Joining Date</td>
+                <td class="TdData">6/1/2022</td>
+                <td class="Tdlbl">Project</td>
+                <td class="TdData">XYZ</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Employee Type</td>
+                <td class="TdData">Teacher</td>
+                <td class="Tdlbl">Employee Status</td>
+                <td class="TdData">Active</td>
+                <td class="Tdlbl">Transfer Type(Salary)</td>
+                <td class="TdData">Bank</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Employee Group</td>
+                <td class="TdData">XYZ</td>
+                <td class="Tdlbl">Organization</td>
+                <td colspan="3" class="TdData">Organization Name</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#li1").addClass("mm-active");
+        $("#li2").removeClass("mm-active");
+        $("#li3").removeClass("mm-active");
+        $("#li4").removeClass("mm-active");
+        $("#li5").removeClass("mm-active");
+        $("#li6").removeClass("mm-active");
+        $("#li7").removeClass("mm-active");
+        $("#li8").removeClass("mm-active");
+        $("#li9").removeClass("mm-active");
+        $("#li10").removeClass("mm-active");
+        $("#li11").removeClass("mm-active");
+        $("#li12").removeClass("mm-active");
+    });
+</script>
+
+

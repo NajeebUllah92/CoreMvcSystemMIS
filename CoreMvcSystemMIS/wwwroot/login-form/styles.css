@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+
+}
+
+body {
+    background-image: url("/login-form/img/bgg.jpg");
+    position: fixed;
+    width: 100vw;
+    height: 110vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+.container {
+  padding: 0 20px;
+}
+
+.sub-container {
+
+  max-width: 500px;
+  width: 100%;
+  height: 430px;
+  margin: 50px auto 0;
+  display: flex;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.125);
+   opacity: 0.7;
+}
+
+.sub-container .banner-img {
+  width: 570px;
+  height: 100%;
+}
+
+.sub-container .banner-img img {
+  width: 100%;
+  height: 100%;
+}
+img{
+    width:40%;    
+}
+p{
+  font-size: 12px;
+}
+.sub-container .login-form {
+  width: 570px;
+  height: 100%;
+  text-align: center;
+  padding: 40px 35px 0;
+  position: relative;
+}
+
+.sub-container .login-form .title {
+ 
+  font-size: 8px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.login-form .label {
+  color: #524a4a;
+  font-size: 14px;
+
+}
+
+.login-form .input {
+  margin: 5px 0 15px;
+  width: 100%;
+  padding: 8px;
+  padding-left: 50px;
+}
+
+.login-form .forgot a {
+  color: #6e8d30;
+  font-size: 18px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #6e8d30;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn-danger:hover {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 350px) {
+  .sub-container {
+    flex-direction: column;
+    max-width: 300px;
+    height: auto;
+    margin-top: 50px;
+  }
+  .sub-container .banner-img {
+    width: 100%;
+    height: 220px;
+  }
+  .sub-container .login-form {
+    width: 100%;
+    padding: 20px 35px 0;
+  }
+  .sub-container .login-form .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .login-form .input {
+    margin-bottom: 10px;
+  }
+
+  .login-form .forgot {
+    margin-bottom: 55px;
+  }
+  .btn {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+    .footer { 
+       position: fixed;
+       left: 0;
+       bottom: 0;
+/*       transform: translate(-50%, -50%);*/
+       width: 100%;
+       background: rgba(0,0,0,0.2);
+
+   }
+.footer p
+{
+     margin-left: 20px;
+     margin-top: 10px;
+    color: black;
+   font-size: 18px;
+}
+.footer p a
+{
+    color: blue;
+}
+
+    @media only screen and (max-width: 600px) {
+    }
+}

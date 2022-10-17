@@ -1,0 +1,132 @@
+.printModal {
+    font-family: sans-serif;
+    display: flex;
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: #0460b5;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0,0%,100%,.91)
+}
+
+.printClose {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+    .printClose:before {
+        content: "\00D7";
+        font-family: Helvetica Neue,sans-serif;
+        font-weight: 100;
+        line-height: 1px;
+        padding-top: .5em;
+        display: block;
+        font-size: 2em;
+        text-indent: 1px;
+        overflow: hidden;
+        height: 1.25em;
+        width: 1.25em;
+        text-align: center;
+        cursor: pointer
+    }
+/*#fixedclass table{
+    background: rgb(99,255,81);
+    background: linear-gradient(0deg, rgba(99,255,81,1) 0%, rgba(251,251,251,50) 50%, rgba(99,255,81,1) 100%);
+}*/
+
+/*@media screen and (max-width: 767px) {
+    .metismenu-icon{
+        margin-right:0px;
+    }
+    .btn-group-sm, neworder {
+        margin-right:0px;
+    }
+    #ChkIsReturn{
+        margin-right:5px;
+        border:2px solid black;
+    }
+    .fixedclasspos {
+        width: 100%;
+    }
+        .fixedclasspos #fixedclass .col-sm-9 {
+            width: 100%;
+            padding: 0px;
+            position: absolute;
+        }
+        .fixedclasspos #fixedclass .col-sm-9 table {
+            width: 100%;
+            float: left;
+            flex-direction: row;
+            display:block;
+        }
+            .fixedclasspos #fixedclass .col-sm-9 table tr {
+                width: 25%;
+            }
+    .fixedclasspos #fixedclass .col-sm-9 table tr td {*/
+        /*display: inline-table;*/
+        /*flex-direction: row;
+        width:25%;
+    }
+    .fixedclasspos #fixedclass .col-sm-9 table tr td input{
+        width:20px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .card-header-title span{
+        font-size:12px;
+        margin-right:0px;
+    }
+    .card-header-title label{
+        font-size:12px;
+        padding-left:5px;
+        margin-top:3px;
+        padding-right:0px;
+    }
+}*/
+    /* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+    /*@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {*/
+
+    /* Force table to not be like tables anymore */
+    /*.fixedclasspos #fixedclass .col-sm-9 table, td, tr {
+        display: block;
+    }*/
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    /*table tr {*/
+    /*position: absolute;*/
+    /*top: -9999px;
+            left: -9999px;
+        }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {*/
+    /* Behave  like a "row" */
+    /*border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+        td:before {*/
+    /* Now like a table header */
+    /*position: absolute;*/
+    /* Top/left values mimic padding */
+    /*top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+}*/

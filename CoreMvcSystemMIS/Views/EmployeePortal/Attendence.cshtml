@@ -1,0 +1,437 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="~/Attendencedropdown.css" rel="stylesheet" />
+@*<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>*@
+@*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+<!------ Include the above in your HEAD tag ---------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<nav class="" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Employee</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Attendance Sheet</li>
+    </ol>
+</nav>
+<nav class="breadcrumb" aria-label="breadcrumb">
+    <img src="~/Content/img/notification/3.jpg" style="width:60px;height:100%; border-radius:50%;margin-right:20px;" />
+    <table style="margin:0px;">
+        <tr>
+            <td class=" font-weight-bolder">Muhammad Siqaf</td>
+        </tr>
+        <tr style="font:40px;">
+            <td>Registration No : </td>
+            <td>12345</td>
+        </tr>
+    </table>
+</nav>
+<div class="card mb-0"style="margin:0px;">
+    <div class="col-lg-12 card-body card_body_custom">
+        <div class="row">
+            <div class="col-lg-2 col-sm-2 col-md-2">
+                <div class="dropdown d-inline-block" style="width:100%">
+                    <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" style="width:100%" class="mb-2 mr-2 dropdown-toggle pull- btn btn-primary">
+                        Filter Options
+                    </button>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" style="">
+                        <ul class="nav flex-column">
+
+                            <li class="nav-item">
+                                <div href="javascript:void(0);" class="nav-link" style="padding-bottom:0px;padding-top:0px">
+                                    <div class="ml-auto badge badge-pill">Session</div>
+                                    <div class="ml-auto badge badge-pill">
+                                        <select class="form-control text_box select2-hidden-accessible" id="cmbSessionId" style="width: 220px" tabindex="-1" aria-hidden="true">
+                                            <option value="0">--All Sessions--</option>
+                                            <option value="7">2021-22</option>
+                                        </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 220px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cmbSessionId-container"><span class="select2-selection__rendered" id="select2-cmbSessionId-container" title="--All Sessions--">--All Sessions--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div href="javascript:void(0);" class="nav-link" style="padding-bottom:0px;padding-top:0px">
+                                    <div class="ml-auto badge badge-pill">Program</div>
+                                    <div class="ml-auto badge badge-pill">
+                                        <select class="form-control text_box select2-hidden-accessible" id="cmbProgramId" style="width: 220px" tabindex="-1" aria-hidden="true">
+                                            <option value="0">--All Programs--</option>
+                                            <option value="26">Primary</option>
+                                            <option value="81">Middle</option>
+                                            <option value="92">BS Nursing</option>
+                                        </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 220px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cmbProgramId-container"><span class="select2-selection__rendered" id="select2-cmbProgramId-container" title="--All Programs--">--All Programs--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div href="javascript:void(0);" class="nav-link" style="padding-bottom:0px;padding-top:0px">
+                                    <div class="ml-auto badge badge-pill">Class</div>
+                                    <div class="ml-auto badge badge-pill">
+                                        <select class="form-control text_box select2-hidden-accessible" id="cmbClassId" style="width: 220px" tabindex="-1" aria-hidden="true">
+                                            <option value="0">--All Classes--</option>
+                                        </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 220px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cmbClassId-container"><span class="select2-selection__rendered" id="select2-cmbClassId-container" title="--All Classes--">--All Classes--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div href="javascript:void(0);" class="nav-link" style="padding-bottom:0px;padding-top:0px">
+                                    <div class="ml-auto badge badge-pill">Student Category</div>
+                                    <div class="ml-auto badge badge-pill">
+                                        <select class="form-control text_box select2-hidden-accessible" id="cmbStudentCategory" style="width:220px" tabindex="-1" aria-hidden="true">
+                                            <option>--All--</option>
+                                            <option value="14">General </option>
+                                            <option value="15">Teacher Son</option>
+                                            <option value="16">ETEA Students</option>
+                                        </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 220px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cmbStudentCategory-container"><span class="select2-selection__rendered" id="select2-cmbStudentCategory-container" title="--All--">--All--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div href="javascript:void(0);" class="nav-link" style="padding-bottom:0px;padding-top:0px">
+                                    <div class="ml-auto badge badge-pill">Gender</div>
+                                    <div class="ml-auto badge badge-pill">
+                                        <select class="form-control select2-hidden-accessible" id="cmbGender" style="width:220px" tabindex="-1" aria-hidden="true">
+                                            <option value="all">--All--</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 220px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cmbGender-container"><span class="select2-selection__rendered" id="select2-cmbGender-container" title="--All--">--All--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div href="javascript:void(0);" class="nav-link" style="padding-bottom:0px;padding-top:0px">
+                                    <div class="ml-auto badge badge-pill">Sorting</div>
+                                    <div class="ml-auto badge badge-pill">
+                                        <select class="form-control search_dropdown select2-hidden-accessible" style="width: 220px" id="cmbSort" tabindex="-1" aria-hidden="true">
+                                            <option value="1">Descending</option>
+                                            <option value="2">Ascending</option>
+                                        </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 220px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cmbSort-container"><span class="select2-selection__rendered" id="select2-cmbSort-container" title="Descending">Descending</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item-divider nav-item"></li>
+                            <li class="nav-item-btn nav-item">
+                                <button class="btn-wide btn-shadow btn btn-danger btn-sm" data-toggle="dropdown">Cancel</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-5 col-md-5">
+                <input type="text" class="form-control search_text_box" style="width:100%" placeholder="Search Student..." id="txtSearch">
+            </div>
+            <div class="col-lg-5 col-sm-5 col-md-5" style="text-align:right">
+                <div class="card_footer_custom_div">
+                    <div class="btn-group">
+                        <a class="btn btn-success responsive-center add_new_button" href="/EmployeePortal/DailyAttendence">Create New</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="mb-3 mt-0 card">
+            <div class="col-lg-12 card-body card_body_custom">
+
+                <table id="attendencetable" style="width:100%;" class="table table-responsive-sm table-striped table-bordered mt-0">
+                    <thead class="text-center bg-heavy-rain">
+                        <tr class="list-inline ">
+                            <th class="table_sno">S.No</th>
+                            <th>Sheet No</th>
+                            <th>Date</th>
+                            <th>Program</th>
+                            <th>Teacher</th>
+                            <th>Subject</th>
+                            <th>Ses Name</th>
+                            <th>Duration</th>
+                            <th style="text-align:center">Status</th>
+                            <th>Remarks</th>
+                            <th style="text-align:center; width:100px">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblBody">
+                        <tr id="row_282">
+                            <td class="table_sno">1</td>
+                            <td>225-44</td>
+                            <td>28-Apr-2022</td>
+                            <td>MBBS</td>
+                            <td>TAYABA BASHARAT</td>
+                            <td>Pharmacology</td>
+                            <td>2021-22</td>
+                            <td>60 Min</td>
+
+                            <td class="font-weight-bold text-center" id="Mark">Marked In-Active</td>
+                            <td>Siqaf Khattak</td>
+                            <td style="text-align:center">
+                                <div class="responsive-mg-b-0 dropdown d-inline-block">
+                                    <a href="javascript:void(0);" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" class="mb-2 dropdown-toggle">
+                                        <i class="fas fa-cogs" style="font-size:medium" aria-hidden="true"></i>
+                                    </a>
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-right dropdown-menu-rounded dropdown-menu">
+                                        <div class="dropdown-menu-header">
+                                            <div class="dropdown-menu-header-inner bg-dark">
+                                                <div class="menu-header-image opacity-1" style="background-image: url('assets/images/dropdown-header/abstract10.jpg');"></div>
+                                                <div class="menu-header-content">
+                                                    <h5 class="menu-header-title">Actions</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a style="color:green" class="dropdown-item card-hover-shadow btn-hover-shine" title="Edit Student" onclick="NewOrEditRecord(2549)" asp-action="MarkSheet" asp-controller="EmployeePortal"><i class="fas fa-marker" style="color: green; margin-right: 10px;font-size:12px;" aria-hidden="true"></i>Mark</a>
+                                        <a style="color:blue" class="dropdown-item card-hover-shadow btn-hover-shine" title="Add Sections" asp-action="AttendencePrint" asp-controller="EmployeePortal"><i class="fa-solid fa-print" style="color: blue; margin-right: 10px; font-size: 12px;" aria-hidden="true"></i>Print</a>
+                                        <a style="color:red" href="javascript:void(0);" class="dropdown-item card-hover-shadow btn-hover-shine" title="Delete Student" onclick="DeleteRecord(2549)"><i class="fa-regular fa-trash-can" style="margin-right: 10px; color: red; font-size: 12px;" aria-hidden="true"></i>Delete</a>
+                                        <a class="dropdown-item card-hover-shadow btn-hover-shine" title="Edit Student" onclick="NewOrEditRecord(282)" href="/Student/NewStudent/282"><i class="fa-solid fa-upload" style="margin-right: 10px; color: darkgreen; font-size: 12px;" aria-hidden="true"></i>Upload</a>
+                                        <a href="javascript:void(0);" class="dropdown-item card-hover-shadow btn-hover-shine" title="Delete Student" onclick="NewOrEditRecord(282)"><i class="fa-solid fa-repeat" style="margin-right: 10px; color: darkblue; font-size: 12px;" aria-hidden="true"></i>Repeat</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        @*<tr id="row_2549">
+            <td class="table_sno">2</td>
+            <td></td>
+            <td>2021-22</td>
+            <td></td>
+            <td>KHALID</td>
+            <td>WALI DAD</td>
+            <td>Middle</td>
+            <td>6th</td>
+            <td style="text-align:center; color:darkgreen">Complete</td>
+            <td style="text-align:center">
+                <div class="dropdown d-inline-block">
+                    <a href="javascript:void(0);" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" class="mb-2 dropdown-toggle">
+                        <i class="fas fa-cogs" aria-hidden="true"></i>
+                    </a>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-right dropdown-menu-rounded dropdown-menu">
+                        <div class="dropdown-menu-header">
+                            <div class="dropdown-menu-header-inner bg-dark">
+                                <div class="menu-header-image opacity-1" style="background-image: url('assets/images/dropdown-header/abstract10.jpg');"></div>
+                                <div class="menu-header-content">
+                                    <h5 class="menu-header-title">Actions</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" title="Edit Student" onclick="NewOrEditRecord(2549)" href="/Student/NewStudent/2549"><i class="fas fa-marker" style="margin-right:10px" aria-hidden="true"></i>Edit</a>
+                        <a href="javascript:void(0);" class="dropdown-item" title="Delete Student" onclick="DeleteRecord(2549)"><i class="fas fa-trash-restore-alt" style="margin-right:10px" aria-hidden="true"></i>Delete</a>
+                        <a class="dropdown-item" title="Add Sections" href="/Student/StudentFeeDetail?StudentId=2549"><i class="fas fa-clone" style="margin-right:10px" aria-hidden="true"></i>Fee Detail</a>
+                    </div>
+                </div>
+            </td>
+        </tr>*@
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="15" class="table_footer">
+                                <div class="row">
+                                    <div class="col-8 col-md-10 col-lg-10 table_page_info" style="padding-top:15px;">
+                                        <b>Page No.1 of Total Page(s).1</b>
+                                    </div>
+                                    
+                                    <div class="col-4 col-md-2 col-lg-2">
+                                        <input type="button" value="Previous" onclick="Previous()" id="btn1" class="btn btn-primary table_btn_previous" disabled="">
+                                        <input type="button" id="btn2" onclick="Next()" value="Next" class="btn btn-primary table_btn_next" disabled="">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                        @*<input type="hidden" value="1" id="txtpageIndex">
+                          <input type="hidden" value="1" id="txtTotalPages">*@
+                </table>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-lg-12" style="overflow-x: auto;padding-right:30px;padding-left:30px;">
+                <table style="width:100%; margin-top:15px; margin-bottom:15px;">
+                    <tr>
+                        <td class="Tdlbl"><u>Colleges</u></td>
+                        <td class="TdData">
+                            <select class="form-control select2">
+                                <option selected>Nowshera Medical College(NMC)</option>
+                                <option>Khyber Medical College (KMC)</option>
+                            </select>
+                        </td>
+                        <td class="Tdlbl">Program</td>
+                        <td class="TdData">
+                            <select name="type" class="form-control select2">
+                                <option value="volvo" selected>- View All -</option>
+                                <option value="saab">Obsent</option>
+                                <option value="opel">Late</option>
+                                <option value="audi">Not-Marked</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Tdlbl"><u>Sem/ Year</u></td>
+                        <td class="TdData">
+                            <select name="type" class="form-control select2">
+                                <option value="volvo" selected>- View All -</option>
+                                <option value="saab">Obsent</option>
+                                <option value="opel">Late</option>
+                                <option value="audi">Not-Marked</option>
+                            </select>
+                        </td>
+                        <td class="Tdlbl"><u>Teacher</u></td>
+                        <td class="TdData">
+                            <select name="type" class="form-control select2">
+                                <option value="volvo" selected>View All</option>
+                                <option value="saab">Obsent</option>
+                                <option value="opel">Late</option>
+                                <option value="audi">Not-Marked</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Tdlbl"><u>Status</u></td>
+                        <td class="TdData">
+                            <select name="type" class="form-control select2">
+                                <option value="volvo" selected>- View All -</option>
+                                <option value="saab">Obsent</option>
+                                <option value="opel">Late</option>
+                                <option value="audi">Not-Marked</option>
+                            </select>
+                        </td>
+                        <td class="Tdlbl"><u>Subject</u></td>
+                        <td class="TdData">
+                            <select name="type" class="form-control select2">
+                                <option value="volvo">- View All -</option>
+                                <option value="saab">Obsent</option>
+                                <option value="opel">Late</option>
+                                <option value="audi">Not-Marked</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Tdlbl"><u>From Date</u></td>
+                        <td class="TdData">
+                            <input type="date" class="form-control" />
+                        </td>
+                        <td class="Tdlbl"><u>To Date</u></td>
+                        <td class="TdData">
+                            <input type="date" class="form-control" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Tdlbl"><u>Subject Group</u></td>
+                        <td class="TdData">
+                            <select name="type" class="form-control select2">
+                                <option value="volvo" selected>- View All -</option>
+                                <option value="saab">Obsent</option>
+                                <option value="opel">Late</option>
+                                <option value="audi">Not-Marked</option>
+                            </select>-->
+                            @*<button class="btn btn-outline-success" style="width:50%;align-content:center;"><i class="fa-solid fa-check-circle"></i>View</button>*@
+                        <!--</td>
+                        <td class="Tdlbl"><u>Server Url</u></td>
+                        <td class="TdData">
+                            <select name="type" class="form-control select2">
+                                <option value="volvo" selected>- View All -</option>
+                                <option value="saab">Obsent</option>
+                                <option value="opel">Late</option>
+                                <option value="audi">Not-Marked</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="margin-left:10px;">
+                            <button style="width: 20%; margin-left:13%;text-align:center;"><i class="fa-solid fa-check-circle"></i>View</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="card-header-tab card-header">
+            <div class="card-header-title font-size-lg text-capitalize font-weight-bold">
+                <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+                User Attendance
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="mb-1 card">
+                <table class="table-primary table-bordered bg-white ml-0 mr-0" style="width:100%;margin:0px;" id="attendencetable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Sheet No</th>
+                            <th>Date</th>
+                            <th>Program</th>
+                            <th>Teacher</th>
+                            <th>Subject</th>
+                            <th>Ses Name</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                            <th>Remarks</th>
+                            <th>Mark</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>225-44</td>
+                            <td>28-Apr-2022</td>
+                            <td>MBBS</td>
+                            <td>TAYABA BASHARAT</td>
+                            <td>Pharmacology</td>
+                            <td>2021-22</td>
+                            <td>60 Min</td>
+                            <td class="font-weight-bold" id="Mark">Marked In-Active</td>
+                            <td>Siqaf Khattak</td>
+                            <td><a class="card-hover-shadow btn-hover-shine" asp-action="Mark" asp-controller="EmployeePortal"><i class="fa-solid fa-marker" style="color:green;"> Mark</i></a> <i class="fa-solid fa-print" style="color:blue;"> Print</i> <i class="fa-regular fa-trash-can" style="color:red;"> Remove</i></td>
+                            <td><i class="fa-solid fa-upload" style="color:darkgreen"> Upload</i> <i class="fa-solid fa-check" style="color:darkblue"> Repeat</i></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>225-44</td>
+                            <td>28-Apr-2022</td>
+                            <td>MBBS</td>
+                            <td>TAYABA BASHARAT</td>
+                            <td>Pharmacology</td>
+                            <td>2021-22</td>
+                            <td>60 Min</td>
+                            <td class="font-weight-bold" id="Mark">Marked In-Active</td>
+                            <td>ARQAM AZIZ</td>
+                            <td><a class="card-hover-shadow btn-hover-shine" asp-action="Mark" asp-controller="EmployeePortal"><i class="fa-solid fa-marker" style="color:green;"> Mark</i></a> <i class="fa-solid fa-print" style="color:blue;"> Print</i> <i class="fa-regular fa-trash-can" style="color:red;"> Remove</i></td>
+                            <td><i class="fa-solid fa-upload" style="color:darkgreen"> Upload</i> <i class="fa-solid fa-check" style="color:darkblue"> Repeat</i></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>225-44</td>
+                            <td>28-Apr-2022</td>
+                            <td>MBBS</td>
+                            <td>TAYABA BASHARAT</td>
+                            <td>Pharmacology</td>
+                            <td>2021-22</td>
+                            <td>60 Min</td>
+                            <td class="font-weight-bold" id="Mark">Marked In-Active</td>
+                            <td>MUHAMMAD ATIF</td>
+                            <td><a class="card-hover-shadow btn-hover-shine" asp-action="Mark" asp-controller="EmployeePortal"><i class="fa-solid fa-marker" style="color:green;"> Mark</i></a> <i class="fa-solid fa-print" style="color:blue;"> Print</i> <i class="fa-regular fa-trash-can" style="color:red;"> Remove</i></td>
+                            <td><i class="fa-solid fa-upload" style="color:darkgreen"> Upload</i> <i class="fa-solid fa-check" style="color:darkblue"> Repeat</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>-->
+    </div>
+    @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#li1").addClass("mm-active");
+            $("#li2").removeClass("mm-active");
+            $("#li3").removeClass("mm-active");
+            $("#li4").removeClass("mm-active");
+            $("#li5").removeClass("mm-active");
+            $("#li6").removeClass("mm-active");
+            $("#li7").removeClass("mm-active");
+            $("#li8").removeClass("mm-active");
+            $("#li9").removeClass("mm-active");
+            $("#li10").removeClass("mm-active");
+            $("#li11").removeClass("mm-active");
+            $("#li12").removeClass("mm-active");
+        });
+    </script>
+    <script>
+        $('.select2').select2();
+    </script>
+
+
+

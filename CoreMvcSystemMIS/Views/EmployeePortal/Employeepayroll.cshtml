@@ -1,0 +1,381 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewBag.Title = "Employeepayroll";
+}
+<style>
+    tr {
+        height: 30px;
+    }
+
+    .Tdlbl {
+        width: 20%;
+        font-weight: bold;
+        font-size:smaller;
+        flex:none;
+    }
+
+    .TdData {
+        font-size: small;
+        width: 30%;
+        color: black;
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    }
+    @@media screen and (max-width: 600px) {
+        table {
+            font-size: 12px;
+        }
+        /*.Tdlbl {
+            font-size: 12px;
+        }*/
+        .TdData {
+            font-size: 12px;
+        }
+    }
+    @@media screen and (max-width: 450px){
+        table{
+            font-size:x-small;
+        }
+        .TdData{
+            font-size:xx-small;
+        }
+    }
+</style>
+<nav class="" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Employee PayRoll</li>
+    </ol>
+</nav>
+<nav class="breadcrumb" aria-label="breadcrumb">
+    <img src="~/Content/img/notification/3.jpg" style="width:60px;height:100%; border-radius:50%;margin-right:20px;" />
+    <table style="margin:0px;">
+        <tr>
+            <td class=" font-weight-bolder">Muhammad Siqaf</td>
+        </tr>
+        <tr style="font:50px;">
+            <td>Registration No : </td>
+            <td>12345</td>
+        </tr>
+    </table>
+</nav>
+<div class="mb-3 card">
+    <div class="card-header-tab card-header bg-heavy-rain">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient"> </i>
+            PERSONAL INFORMATION
+        </div>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table class="table table-no-bordered" style="width:100%; margin-top:15px; margin-bottom:15px">
+            <tr>
+                <td class="Tdlbl"style="border-top:none;width:20%;">Name</td>
+                <td class="TdData"style="border-top: none; width: 20%;">Muhammad Siqaf</td>
+                <td class="Tdlbl"style="border-top: none; width: 20%;">Father Name</td>
+                <td class="TdData"style="border-top: none; width: 20%;">ABC</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width: 20%;">Personnal Number</td>
+                <td class="TdData"style="width: 20%;">123456789</td>
+                <td class="Tdlbl"style="width: 20%;">CNIC No</td>
+                <td class="TdData"style="width: 20%;">12345-6789345-8</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width: 20%;">NTN</td>
+                <td class="TdData"style="width: 20%;">XYZ</td>
+                <td class="Tdlbl"style="width: 20%;">Date of Birth <span style="font-size:8px;">(DD/MM/YYYY)</span></td>
+                <td class="TdData"style="width: 20%;">10-01-1990</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width: 20%;">Date of Entry Govt. Service <span style="font-size:8px;">(DD/MM/YYYY)</span></td>
+                <td class="TdData"style="width: 20%;">03-07-2000</td>
+                <td class="Tdlbl"style="width: 20%;">Lenght of Service</td>
+                <td class="TdData"style="width: 20%;">21 Years 06 Months 30 Days</td>
+            </tr>
+        </table>
+    </div>
+    <div class="card-header-tab card-header bg-heavy-rain">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Employement Category : <span style="font-size:smaller">Active Temporary</span>
+        </div>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table class="table table-no-bordered" style="width:100%; margin-top:15px; margin-bottom:15px">
+            <tr>
+                <td class="Tdlbl"style="border-top: none; width: 20%;">Designation</td>
+                <td class="TdData"style="border-top: none; width: 30%;">ASSISTANT PROFESSOR</td>
+                <td class="Tdlbl"style="border-top: none; width: 20%;">Something</td>
+                <td class="TdData"style="border-top: none; width: 25%;">80000782-GOVERNMENT OF KHYBER-PAKH</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">DDO Code</td>
+                <td colspan="11" class="TdData">KA4331-PRINCIPAL PSTGRUTE COLLEGE KARAK</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width: 20%;">Payroll Section</td>
+                <td class="TdData"style="width: 30%;">001</td>
+                <td class="Tdlbl"style="width: 20%;">GPF Section</td>
+                <td class="TdData"style="width: 30%;">018</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width: 20%;">Cash Center</td>
+                <td class="TdData"style="width: 30%;">XYZ</td>
+                <td class="Tdlbl"style="width: 20%;">GPF/Account No</td>
+                <td class="TdData"style="width: 30%;">CLMKD 00304</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width: 20%;">Interest Applied</td>
+                <td class="TdData"style="width: 30%;">No</td>
+                <td class="Tdlbl"style="width: 20%;">GPF Balance</td>
+                <td class="TdData"style="width: 30%;">893,974.00</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width: 20%;">Vendor Number</td>
+                <td class="TdData"style="width: 30%;">XYZ</td>
+                <td class="Tdlbl"style="width: 20%;">GPF Balance</td>
+                <td class="TdData"style="width: 30%;">893,974.00</td>
+            </tr>
+        </table>
+    </div>
+    <div class="card-header-tab card-header bg-heavy-rain">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient"> </i>
+            Pay and Allowances
+        </div>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table style="width:100%; margin-top:15px; margin-bottom:15px">
+            <tr>
+                <td class="Tdlbl"style="width:25%;">Pay Scale</td>
+                <td class="TdData"style="width:25%;">17 For 2017</td>
+                <td class="Tdlbl"style="width:25%;">Pay Scale Type</td>
+                <td class="TdData"style="width:25%;">Civil</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl"style="width:25%;">BPS</td>
+                <td class="TdData"style="width:25%;">18</td>
+                <td class="Tdlbl"style="width:25%;">Pay Stage</td>
+                <td class="TdData"style="width:25%;">17</td>
+            </tr>
+        </table>
+    </div>
+    <table class="table-responsive-sm" style="width:100%;border:1px;border-collapse:collapse;text-align:center;">
+        <thead class="bg-heavy-rain">
+            <tr>
+                <th style="border: 1px solid black; border-right:none;" width="5%"></th>
+                <th style="border: 1px solid black; border-left:none;" width="30%">Wage Type</th>
+                <th style="border: 1px solid black" width="20%">Amount</th>
+                <th style="border: 1px solid black; border-right: none;" width="5%"></th>
+                <th style="border: 1px solid black; border-left: none;" width="30%">Wage Type</th>
+                <th style="border: 1px solid black" width="20%">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border:1px solid black" width="5%">0001</td>
+                <td style="border: 1px solid black" width="25%">Basic Pay</td>
+                <td style="border: 1px solid black" width="20%">87,140.00</td>
+                <td style="border: 1px solid black" width="5%">1001</td>
+                <td style="border: 1px solid black" width="25%">House Rent Allowance 45%</td>
+                <td style="border: 1px solid black" width="20%">8,715.00</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black" width="5%">1210</td>
+                <td style="border: 1px solid black" width="25%">Convey Allowance 2005</td>
+                <td style="border: 1px solid black" width="20%">5,000.00</td>
+                <td style="border: 1px solid black" width="5%">1947</td>
+                <td style="border: 1px solid black" width="25%">Medical Allow 15%(16-22)</td>
+                <td style="border: 1px solid black" width="20%">3,095.00</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black" width="5%">2148</td>
+                <td style="border: 1px solid black" width="25%">15% Adhoc Relief All-2013</td>
+                <td style="border: 1px solid black" width="15%">1,750.00</td>
+                <td style="border: 1px solid black" width="5%">2199</td>
+                <td style="border: 1px solid black" width="25%">Adhoc Relief Allow 10%</td>
+                <td style="border: 1px solid black" width="15%">1,185.00</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black" width="5%">2211</td>
+                <td style="border: 1px solid black" width="25%">Adhoc Relief All 2016 10%</td>
+                <td style="border: 1px solid black" width="15%">6,069.00</td>
+                <td style="border: 1px solid black" width="5%">2224</td>
+                <td style="border: 1px solid black" width="25%">Adhoc Relief All 2017 10%</td>
+                <td style="border: 1px solid black" width="15%">8,714.00</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black" width="5%">2247</td>
+                <td style="border: 1px solid black" width="25%">Adhoc Relief All 2018 10%</td>
+                <td style="border: 1px solid black" width="15%">8,714.00</td>
+                <td style="border: 1px solid black" width="5%">2265</td>
+                <td style="border: 1px solid black" width="25%">Adhoc Relief All 2019 05%</td>
+                <td style="border: 1px solid black" width="15%">4,357.00</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black" width="5%">2309</td>
+                <td style="border: 1px solid black" width="25%">Adhoc Relief All 2021 10%</td>
+                <td style="border: 1px solid black" width="15%">8,714.00</td>
+                <td style="border: 1px solid black" width="5%">2316</td>
+                <td style="border: 1px solid black" width="25%">Teaching Allownce 2021</td>
+                <td style="border: 1px solid black" width="15%">7,670.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Deductions-General
+        </div>
+    </div>
+    <table class="table-responsive-sm" style="width:100%;border:1px;border-collapse:collapse;text-align:center;">
+        <thead class="bg-heavy-rain">
+            <tr>
+                <th style="border: 1px solid black; border-right:none;" width="5%"></th>
+                <th style="border: 1px solid black; border-left:none;" width="30%">Wage Type</th>
+                <th style="border: 1px solid black" width="20%">Amount</th>
+                <th style="border: 1px solid black; border-right: none;" width="5%"></th>
+                <th style="border: 1px solid black; border-left: none;" width="30%">Wage Type</th>
+                <th style="border: 1px solid black" width="20%">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border:1px solid black" width="5%">2018</td>
+                <td style="border: 1px solid black" width="25%">DPF Subscription</td>
+                <td style="border: 1px solid black" width="20%">-5,360.00</td>
+                <td style="border: 1px solid black" width="5%">3501</td>
+                <td style="border: 1px solid black" width="25%">Benevolent Fund</td>
+                <td style="border: 1px solid black" width="20%">-1,500.00</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black" width="5%">3609</td>
+                <td style="border: 1px solid black" width="25%">Income Tax</td>
+                <td style="border: 1px solid black" width="15%">-5,801.00</td>
+                <td style="border: 1px solid black" width="5%">3990</td>
+                <td style="border: 1px solid black" width="25%">Emp.Edu.Fund KPK</td>
+                <td style="border: 1px solid black" width="15%">-250.00</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid black" width="5%">4004</td>
+                <td style="border: 1px solid black" width="25%">R.Benefits & Death Comp:</td>
+                <td style="border: 1px solid black" width="15%">-1,350.00</td>
+                <td style="border: 1px solid black" width="5%"></td>
+                <td style="border: 1px solid black" width="25%"></td>
+                <td style="border: 1px solid black" width="15%">0.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Deductions-Loans and Advances
+        </div>
+    </div>
+    <table class="table-responsive-sm" style="width:100%;border:1px;text-align:center;">
+        <thead class="bg-heavy-rain">
+            <tr>
+                <th style="border: 1px solid black;" width="10%">Loan</th>
+                <th style="border: 1px solid black" width="45%">Description</th>
+                <th style="border: 1px solid black;" width="15%">Principal Amount</th>
+                <th style="border: 1px solid black;" width="15%">Deduction</th>
+                <th style="border: 1px solid black" width="15%">Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black" width="10%">6505</td>
+                <td style="border: 1px solid black" width="45%">GPF Loan Principal Instal</td>
+                <td style="border: 1px solid black" width="15%">840,000.00</td>
+                <td style="border: 1px solid black" width="15%">-24,000.00</td>
+                <td style="border: 1px solid black" width="15%">456,000.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="card-header-tab card-header bg-heavy-rain">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Deductions-Income Tax
+        </div>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table style="width:100%; margin-top:15px; margin-bottom:15px">
+            <tr>
+                <td class="Tdlbl">Payable : </td>
+                <td class="TdData">90,701.25 For 2017</td>
+                <td class="Tdlbl">Recovered Till<span style="font-size:9px;"> JAN-2022 </span>: </td>
+                <td class="TdData">39,027.00</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Exempted : </td>
+                <td class="TdData">22,674.30</td>
+                <td class="Tdlbl">Recoverable : </td>
+                <td class="TdData">28,999.95</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table style="width: 100%; margin-top: 15px; margin-bottom: 15px;text-align: center; ">
+            <tr>
+                <td class="Tdlbl border" style="width:12%"><b>Gross Pay (Rs.) : </b></td>
+                <td class="TdData border" style="width:18%"><u>151,123.00</u></td>
+                <td class="Tdlbl border" style="width:17%"><b>Deductions- (Rs.) : </b></td>
+                <td class="TdData border" style="width:15%"><u>-38,261.00</u></td>
+                <td class="Tdlbl border" style="width:15%"><b>Net Pay (Rs.) : </b></td>
+                <td class="TdData border" style="width:18%"><u> 112,862.00</u></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table style="width: 100%; margin-top: 15px; margin-bottom: 15px;">
+            <tr>
+                <td class="Tdlbl" style="width:20%"><b>Payee Name</b></td>
+                <td class="TdData text-uppercase" style="width:80%">Saad ullah shah</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl" style="width:20%"><b>Account Number</b></td>
+                <td class="TdData text-uppercase" style="width:80%">PLS-104617-6</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl" style="width:20%"><b>Bank Details</b></td>
+                <td class="TdData text-uppercase" style="width:80%">United Bank Limited-210306 City, Karak</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-12 table-responsive-sm">
+        <table style="width: 100%; margin-top: 15px; margin-bottom: 15px;text-align:center;font-size:smaller; ">
+            <tr>
+                <td class="Tdlbl border" style="width:10%"><b>Leaves</b></td>
+                <td class="TdData border" style="width:10%">5</td>
+                <td class="Tdlbl border" style="width:10%"><b>Opening Balance</b></td>
+                <td class="TdData border" style="width:10%">256656</td>
+                <td class="Tdlbl border" style="width:10%"><b>Availed</b></td>
+                <td class="TdData border" style="width:10%">555</td>
+                <td class="Tdlbl border" style="width:10%"><b>Earned</b></td>
+                <td class="TdData border" style="width:10%">15684915</td>
+                <td class="Tdlbl border" style="width:10%"><b>Balance</b></td>
+                <td class="TdData border" style="width:10%">5616155</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#li1").addClass("mm-active");
+            $("#li2").removeClass("mm-active");
+            $("#li3").removeClass("mm-active");
+            $("#li4").removeClass("mm-active");
+            $("#li5").removeClass("mm-active");
+            $("#li6").removeClass("mm-active");
+            $("#li7").removeClass("mm-active");
+            $("#li8").removeClass("mm-active");
+            $("#li9").removeClass("mm-active");
+            $("#li10").removeClass("mm-active");
+            $("#li11").removeClass("mm-active");
+            $("#li12").removeClass("mm-active");
+        });
+</script>

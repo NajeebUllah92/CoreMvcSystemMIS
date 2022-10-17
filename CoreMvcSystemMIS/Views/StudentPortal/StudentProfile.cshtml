@@ -1,0 +1,161 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<style>
+    /*tr {
+        height: 30px;
+    }*/
+
+    /*.Tdlbl {
+        width: 15%;
+    }*/
+
+    /*.TdData {
+        width: 35%;
+        font-weight: bold;
+        font-style: italic;
+    }*/
+
+    tr {
+        height: 30px;
+    }
+
+    .Tdlbl {
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+        width: 17%;
+    }
+
+    .TdData {
+        font: 30px;
+        font-weight: 500;
+        width: 16%;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        color: black;
+    }
+
+    .Tdhead {
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+        min-width: 15%;
+        max-width: 20%;
+    }
+
+    .Tdbody {
+        font: 30px;
+        font-weight: 500;
+        min-width: 20%;
+        max-width: 30%;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        color: black;
+    }
+@@media only screen and (max-width: 600px) {
+    .Tdhead {
+        font-size:8px;
+    }
+    .Tdbody {
+        font-size:8px;
+    }
+}
+</style>
+<nav class="" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Student Profile</li>
+    </ol>
+</nav>
+<div class="mb-3 card">
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Registration Information
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <table class="table table-no-bordered table-responsive-sm" style="width:100%; margin-top:15px; margin-bottom:15px">
+            <tr>
+                <td class="Tdhead"style="border-top:none;">Roll No:</td>
+                <td class="Tdbody"style="border-top:none;">01</td>
+                <td class="Tdhead"style="border-top:none;">Reg. No:</td>
+                <td class="Tdbody"style="border-top:none;">BS-01-2020</td>
+            </tr>
+            <tr>
+                <td class="Tdhead" >PNC:</td>
+                <td class="Tdbody" >PNC01</td>
+                <td class="Tdhead" >Program:</td>
+                <td class="Tdbody" >B.S Computer Science</td>
+            </tr>
+            <tr>
+                <td class="Tdhead" >Class:</td>
+                <td class="Tdbody" >BS 1st Year</td>
+                <td class="Tdhead" >Institute:</td>
+                <td class="Tdbody" >Imperial Science School and College</td>
+            </tr>
+            <tr>
+                <td class="Tdhead">Session:</td>
+                <td class="Tdbody">2019-20</td>
+                <td class="Tdhead">Status:</td>
+                <td class="Tdbody">Enrolled</td>
+            </tr>
+        </table>
+    </div>
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-md text-capitalize font-weight-bold">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Students Information
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <table class="table table-no-bordered table-responsive-sm" style="width: 100%; margin-top: 15px; margin-bottom: 15px">
+            <tr>
+                <td class="Tdlbl">Student Name:</td>
+                <td class="TdData">Amir Khan</td>
+                <td class="Tdlbl">Father's Name:</td>
+                <td class="TdData">Zameen Khan</td>
+                <td rowspan="4">
+                    <img src="~/Content/Template/images/avatars/12.jpg" style="height:120px; width:120px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Gender:</td>
+                <td class="TdData">Male</td>
+                <td class="Tdlbl">Date Of Birth:</td>
+                <td class="TdData">02-07-2000</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Nationality:</td>
+                <td class="TdData">Pakistani</td>
+                <td class="Tdlbl">Religion:</td>
+                <td class="TdData">Islam</td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Student Contact:</td>
+                <td class="TdData">03109639703</td>
+                <td class="Tdlbl">Guardian's Contact:</td>
+                <td class="TdData">03109639703</td>.
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#li1").addClass("mm-active");
+        $("#li2").removeClass("mm-active");
+        $("#li3").removeClass("mm-active");
+        $("#li4").removeClass("mm-active");
+        $("#li5").removeClass("mm-active");
+        $("#li6").removeClass("mm-active");
+        $("#li7").removeClass("mm-active");
+        $("#li8").removeClass("mm-active");
+        $("#li9").removeClass("mm-active");
+        $("#li10").removeClass("mm-active");
+        $("#li11").removeClass("mm-active");
+        $("#li12").removeClass("mm-active");
+    });
+</script>

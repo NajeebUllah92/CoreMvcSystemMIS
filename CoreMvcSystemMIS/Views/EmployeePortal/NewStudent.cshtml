@@ -1,0 +1,888 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!doctype html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<html lang="en">
+<head>
+    <script src="~/Content/css/theme/fontawesome.js"></script>
+    <link href="~/Content/css/theme/IonIcons/css/ionicons.css" rel="stylesheet" />
+    <link href="~/Content/css/theme/IonIcons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/Content/css/theme/PeIcons/Pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="~/Content/css/theme/main.d810cf0ae7f39f28f336.css" rel="stylesheet" />
+    <link href="~/Content/css/Styles.css" rel="stylesheet" />
+    <link href="~/Content/css/fontawesome-free-5.15.0-web/css/all.css" rel="stylesheet" />
+    <link href="~/Content/css/select2.css" rel="stylesheet" />
+    <link href="~/Content/sweetalert.min.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-container" style="margin-top:0px;">
+        @*<div class="app-main">*@
+        @*<div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner" style="padding:0.5rem">
+                        <ul class="vertical-nav-menu" id="SideNavBar">
+                            <li class="app-sidebar__heading">Forms</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-users"></i>Students
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/Student/Students">
+                                            <i class="metismenu-icon"></i>Students
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Student/StudentAdmissions">
+                                            <i class="metismenu-icon"></i>Admission
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Student/StudentResettings">
+                                            <i class="metismenu-icon"></i>Promotion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <i class="metismenu-icon"></i>Center Assigning
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Student/NewStudent/0">
+                                            <i class="metismenu-icon"></i>New Enrollment
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-id"></i>Examination
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/">
+                                            <i class="metismenu-icon"></i>Subject Wise Marks
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-cash"></i>Fee
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/Fee/FeePostingHisotry">
+                                            <i class="metismenu-icon"></i>Fee Postings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Fee/FeeChallanPrint">
+                                            <i class="metismenu-icon"></i>Unpaid Challans
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Fee/StudentsFeeReceipt">
+                                            <i class="metismenu-icon"></i>Challan Receipt
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Fee/ReceivedFeeChallans">
+                                            <i class="metismenu-icon"></i>Paid Challans
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Fee/BlockedFeeChallans">
+                                            <i class="metismenu-icon"></i>Blocked Challans
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="app-sidebar__heading">Settings</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-tools"></i>General Setting
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/Master/Sessions">
+                                            <i class="metismenu-icon"></i>Session
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Program/Programs">
+                                            <i class="metismenu-icon"></i>Program
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/Examinations">
+                                            <i class="metismenu-icon"></i>Examination
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/Centers">
+                                            <i class="metismenu-icon"></i>Centers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <i class="metismenu-icon"></i>Marks Setup
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/Batches">
+                                            <i class="metismenu-icon"></i>Batches
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/StudentCategories">
+                                            <i class="metismenu-icon"></i>Student Cateogry
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>Master Data
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/Master/Examinations">
+                                            <i class="metismenu-icon"></i>Examination
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/Institutions">
+                                            <i class="metismenu-icon"></i>Institution
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/Centers">
+                                            <i class="metismenu-icon"></i>Centers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/Religions">
+                                            <i class="metismenu-icon"></i>Religion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Master/Qualifications">
+                                            <i class="metismenu-icon"></i>Qualification
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-settings"></i>Fee Setting
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/Fee/FeeItems">
+                                            <i class="metismenu-icon"></i>Manage Fee Items
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Fee/FeeGroups">
+                                            <i class="metismenu-icon"></i>Manage Fee Groups
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Fee/FeeTerms">
+                                            <i class="metismenu-icon"></i>Mange Fee Terms
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="app-sidebar__heading">Reports</li>
+                            <li>
+                                <a href="/Reports/Index?ModuleId=8">
+                                    <i class="metismenu-icon pe-7s-mouse"></i>Reports
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>*@
+        <div class="app-main" style="margin-top:0px;">
+            <div class="app-main__inner" style="padding:10px 10px">
+                <nav class="" aria-label="breadcrumb" style="margin-bottom: 1px; margin-top: -60px; background-color: white;">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/HomeAcadmey/Index"style="color:white">Home</a></li>
+                        <li class="active breadcrumb-item" aria-current="page"style="color:white">Student Enrollment</li>
+                    </ol>
+                </nav>
+                <div class="mb-3 card">
+                    <div class="card-header-tab card-header">
+                        <div class="row" style="width:100%">
+                            <div class="col-6">
+                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+                                    <i class="header-icon lnr-charts icon-gradient bg-happy-green"></i>
+                                    <span id="AddTitle" class="add_edit_lable">Admission Info</span>
+                                </div>
+                            </div>
+                            <div hidden class="col-6"><a href="#" id="btnCloseAdd"><i class="fas fa-times" style="color:orangered"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 card-body" id="cardAddbody">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Session</label>
+                                    <div class="col-sm-8">
+                                        <input type="hidden" id="txtId" data-val="true" data-val-required="The Id field is required." name="Id" value="0" />
+                                        <select class="form-control text_box" id="cmbSessionId" style="width:100%" data-val="true" data-val-required="The SessionId field is required." name="SessionId">
+                                            <option value="7">2021-22</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Program</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbProgramId" style="width:100%" data-val="true" data-val-required="The programId field is required." name="programId">
+                                            <option value="0" selected="selected">--Select Program--</option>
+                                            <option value="26">Primary</option>
+                                            <option value="81">Middle</option>
+                                            <option value="92">BS Nursing</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Class</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbClassId" style="width:100%" data-val="true" data-val-required="The ClassId field is required." name="ClassId">
+                                            <option value="0">--Select Class--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Section</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control search_dropdown" style="width:100%" id="cmbSectionId" data-val="true" data-val-required="The SectionId field is required." name="SectionId">
+                                            <option value="57">A</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Batch</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbBatchId" style="width:100%" data-val="true" data-val-required="The BatchId field is required." name="BatchId">
+                                            <option value="27">2021-25</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Institute</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbInstitutionId" style="width:100%" data-val="true" data-val-required="The InstitutionId field is required." name="InstitutionId">
+                                            <option value="17">KIHS</option>
+                                            <option value="18">Afaq</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Registration No</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtRegistrationNo" type="text" name="RegistrationNo" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">PLC No</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtPlcNo" type="text" name="PlcNo" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Image</label>
+                                    <div class="col-sm-8">
+                                        <input id="imgStudent" class="form-control" style="margin-top:10px; margin-bottom:10px" type="file" name="_CommonRepository.StudentImage" />
+                                        <small id="fileHelp" class="text-muted">
+                                            <img src="~/images/SudentPhotIcon.png" id="imgPreview" style="height: 150px;width: 200px" class="img-thumbnail">
+
+                                        </small>
+                                        <input type="hidden" name="old_image" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Status</label>
+                                    <div class="col-sm-8" style="margin-top:10px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 card">
+                    <div class="card-header-tab card-header">
+                        <div class="row" style="width:100%">
+                            <div class="col-6">
+                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+                                    <i class="header-icon lnr-charts icon-gradient bg-happy-green"></i>
+                                    <span id="AddTitle" class="add_edit_lable">Personal Info</span>
+                                </div>
+                            </div>
+                            <div hidden class="col-6"><a href="#" id="btnCloseAdd"><i class="fas fa-times" style="color:orangered"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 card-body" id="cardAddbody">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Student Name</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtStudentName" type="text" name="StudentName" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Father Name</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtFatherName" type="text" name="FatherName" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Father Profession</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtFatherProfession" type="text" name="FatherProfession" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Qualification</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbQualificationId" style="width:100%" data-val="true" data-val-required="The QualificationId field is required." name="QualificationId">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Date of Birth</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtDOB" type="datetime-local" data-val="true" data-val-required="The DOB field is required." name="DOB" value="0001-01-01T00:00:00.000">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Date of Joining</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtDateOfJoining" type="datetime-local" data-val="true" data-val-required="The DateOfJoining field is required." name="DateOfJoining" value="0001-01-01T00:00:00.000">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Joining Session</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbJoiningSessionId" style="width:100%" data-val="true" data-val-required="The JoiningSessionId field is required." name="JoiningSessionId">
+                                            <option value="7">2021-22</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Permanent Address</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtPermanentAddress" type="text" name="PermanentAddress" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Postal Address</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtPostalAddress" type="text" name="PostalAddress" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Email Address</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control text_box" placeholder="" id="txtEmailAddress" type="text" name="EmailAddress" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Gender</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control text_box" id="cmbGender" style="width:100%" name="Gender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Student Contact</label>
+                                    <div class="col-sm-7">
+                                        <input class="form-control text_box" placeholder="" id="txtStudentContact" type="text" name="StudentContact" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Father Contact</label>
+                                    <div class="col-sm-7">
+                                        <input class="form-control text_box" placeholder="" id="txtFatherContact" type="text" name="FatherContact" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Guardian Contact</label>
+                                    <div class="col-sm-7">
+                                        <input class="form-control text_box" placeholder="" id="txtGuardianContact" type="text" name="GuardianContact" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">CNIC</label>
+                                    <div class="col-sm-7">
+                                        <input class="form-control text_box" placeholder="" id="txtCNIC" type="text" name="CNIC" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Domicile</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control text_box" id="cmbDomicileId" style="width:100%" data-val="true" data-val-required="The DomicileId field is required." name="DomicileId">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">City</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control text_box" id="cmbCityId" style="width:100%" data-val="true" data-val-required="The CityId field is required." name="CityId">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Nationality</label>
+                                    <div class="col-sm-7">
+                                        <input class="form-control text_box" placeholder="" id="txtNationality" type="text" name="Nationality" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Blood Group</label>
+                                    <div class="col-sm-7">
+                                        <input class="form-control text_box" placeholder="" id="txtBloodGroup" type="text" name="BloodGroup" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Religon</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control text_box" id="cmbReligionId" style="width:100%" data-val="true" data-val-required="The ReligionId field is required." name="ReligionId">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 card">
+                    <div class="card-header-tab card-header">
+                        <div class="row" style="width:100%">
+                            <div class="col-6">
+                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+                                    <i class="header-icon lnr-charts icon-gradient bg-happy-green"></i>
+                                    <span id="AddTitle" class="add_edit_lable">Fee Info</span>
+                                </div>
+                            </div>
+                            <div hidden class="col-6"><a href="#" id="btnCloseAdd"><i class="fas fa-times" style="color:orangered"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 card-body" id="cardAddbody">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Fee Group</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbFeeGroupId" style="width:100%" data-val="true" data-val-required="The FeeGroupId field is required." name="FeeGroupId">
+                                            <option value="0" selected="selected">--Select Fee Group--</option>
+                                            <option value="46">6th</option>
+                                            <option value="47">7th</option>
+                                            <option value="56">BS Nursing</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label text-sm-right text-left label_custom">Fee Term</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control text_box" id="cmbFeeTermId" style="width:100%" data-val="true" data-val-required="The FeeTermId field is required." name="FeeTermId">
+                                            <option value="0" selected="selected">--Select Discount Level--</option>
+                                            <option value="37">6th</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="form-group row">
+                                    <label class="col-sm-5 col-form-label text-sm-right text-left label_custom">Student Category</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control text_box" id="cmbCategoryId" style="width:100%" data-val="true" data-val-required="The CategoryId field is required." name="CategoryId">
+                                            <option value="14">General </option>
+                                            <option value="15">Teacher Son</option>
+                                            <option value="16">ETEA Students</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer card_footer_custom">
+                        <span class="success_messege" id="lblMessage"></span>
+                        <div class="card_footer_custom_div">
+                            <div class="mb-2 btn-group">
+                                <button class="btn btn-success" onclick="SaveRecord(1)">Save and New</button>
+                                <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"
+                                        class="dropdown-toggle-split dropdown-toggle btn btn-success">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-right dropdown-menu-rounded dropdown-menu">
+                                    <div class="dropdown-menu-header">
+                                    </div>
+                                    <a href="javascript:void(0);" class="dropdown-item" onclick="SaveRecord(2)" title="Save and New"><i class="fas fa-save" style="margin-right:10px"></i>Save and Close</a>
+                                    <a href="javascript:void(0);" class="dropdown-item" onclick="SaveRecord(3)" title="Save"><i class="fas fa-save" style="margin-right:10px"></i>Save</a>
+                                    <a href="javascript:void(0);" class="dropdown-item" onclick="clearData()" title="New"><i class="fas fa-save" style="margin-right:10px"></i>New</a>
+                                </div>
+                            </div>
+                            <button class="mb-2 mr-2 btn btn-danger" id="btnClose">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="txtImageName" name="PhotoName" value="" />
+                <input type="hidden" id="txtStudentStatus" name="Status" value="" />
+                <div class="modal_waiting">
+                </div>
+                <script src="/Js/jquery-3.3.1.min.js"></script>
+                <script type="text/javascript">
+                    $body = $("body");
+                    function clearData() {
+                        $("#txtId").val("0");
+                        $("#txtName").val("");
+                        $("#txtCode").val("");
+                        $("#txtDisplayOrder").val("");
+                        $("#txtName").focus();
+                    };
+                    function DeleteRecord(id) {
+                        if (confirm('Are you sure to delete the Record')) {
+                            $.ajax({
+                                url: '/Student/DeleteStudent',
+                                type: 'POST',
+                                data: { Id: id },
+                                dataType: 'json',
+                                contentType: 'application/x-www-form-urlencoded',
+                                success: function (result) {
+                                    if (result.Success) {
+                                        alert(result.Message);
+                                        $("#row_" + id).remove();
+                                    } else {
+                                        alert(result.Message);
+                                    }
+                                    $body.removeClass("loading");
+                                }
+                            });
+                        }
+                    };
+                    function SaveRecord(flage) {
+                        var varId = $("#txtId").val();
+                        var varSessionId = $("#cmbSessionId :selected").val();
+                        var varClassId = $("#cmbClassId :selected").val();
+                        var varRegistrationNo = $("#txtRegistrationNo").val();
+                        var varBatchId = $("#cmbBatchId :selected").val();
+                        var varStudentName = $("#txtStudentName").val();
+                        if (varStudentName == "") {
+                            swal({
+                                title: "Warning",
+                                text: "Please Enter Student Name",
+                                icon: "warning",
+                                button: "OK",
+                            });
+                            $("#txtStudentName").focus();
+                            return;
+                        }
+                        var varFatherName = $("#txtFatherName").val();
+                        var varPermanentAddress = $("#txtPermanentAddress").val();
+                        var varDOB = $("#txtDOB").val();
+                        var varNationality = $("#txtNationality").val();
+                        var varReligionId = $("#cmbReligionId :selected").val();
+                        var varQualificationId = $("#cmbQualificationId :selected").val();
+                        var varDateOfJoining = $("#txtDateOfJoining").val();
+                        var varInstitutionId = $("#txtInstitutionId").val();
+                        var varGender = $("#txtGender").val();
+                        var varPhotoName = $("#txtImageName").val();
+                        var varStudentContact = $("#txtStudentContact").val();
+                        var varFatherContact = $("#txtFatherContact").val();
+                        var varCNIC = $("#txtCNIC").val();
+                        var varEmailAddress = $("#txtEmailAddress").val();
+                        var varPostalAddress = $("#txtPostalAddress").val();
+                        var varBloodGroup = $("#txtBloodGroup").val();
+                        var varFatherProfession = $("#txtFatherProfession").val();
+                        var varGuardianContact = $("#txtGuardianContact").val();
+                        var varPlcNo = $("#txtPlcNo").val();
+                        var varJoiningSessionId = $("#cmbJoiningSessionId :selected").val();
+                        var varGuardianName = $("#txtGuardianName").val();
+                        var varFeeGroupId = $("#cmbFeeGroupId :selected").val();
+                        var varFeeTermId = $("#cmbFeeTermId :selected").val();
+                        var varCategoryId = $("#cmbCategoryId :selected").val();
+                        var varHostelId = $("#txtHostelId :selected").val();
+                        var varShiftId = $("#cmbShiftId :selected").val();
+                        var varTransportId = $("#cmbTransportId :selected").val();
+                        var varSectionId = $("#cmbSectionId :selected").val();
+                        var varFamilyId = $("#cmbFamilyId :selected").val();
+                        var varDomicileId = $("#cmbDomicileId :selected").val();
+                        var varCityId = $("#cmbCityId :selected").val();
+                        $(":button").attr("disabled", "disabled");
+                        $body.addClass("loading");
+                        $.ajax({
+                            url: "/Student/SaveStudent",
+                            type: 'POST',
+                            data: { Id: varId, SessionId: varSessionId, ClassId: varClassId, RegistrationNo: varRegistrationNo, BatchId: varBatchId, StudentName: varStudentName, FatherName: varFatherName, PermanentAddress: varPermanentAddress, DOB: varDOB, Nationality: varNationality, ReligionId: varReligionId, QualificationId: varQualificationId, DateOfJoining: varDateOfJoining, InstitutionId: varInstitutionId, Gender: varGender, PhotoName: varPhotoName, StudentContact: varStudentContact, FatherContact: varFatherContact, CNIC: varCNIC, EmailAddress: varEmailAddress, PostalAddress: varPostalAddress, BloodGroup: varBloodGroup, FatherProfession: varFatherProfession, GuardianContact: varGuardianContact, PlcNo: varPlcNo, DomicileId: varDomicileId, JoiningSessionId: varJoiningSessionId, GuardianName: varGuardianName, FeeGroupId: varFeeGroupId, FeeTermId: varFeeTermId, CategoryId: varCategoryId, HostelId: varHostelId, ShiftId: varShiftId, TransportId: varTransportId, SectionId: varSectionId, FamilyId: varFamilyId, CityId: varCityId },
+                            dataType: 'json',
+                            contentType: 'application/x-www-form-urlencoded',
+                            success: function (result) {
+                                if (result.Success) {
+                                    swal({
+                                        title: "Saved Successfull!",
+                                        text: result.Message,
+                                        icon: "success",
+                                        button: "OK",
+                                        timer: 1000,
+                                    }).then(function () {
+                                        if (flage == 1) {
+                                            location.href = '/Student/RedirctToNewStudent';
+                                        } else if (flage == 2) {
+                                            location.href = '/Student/Students';
+                                        } else if (flage == 3) {
+                                            $("#txtId").val(result.ReturnId);
+                                        }
+                                        $(":button").removeAttr("disabled");
+                                    });
+                                } else {
+                                    swal({
+                                        title: "Error",
+                                        text: result.Message,
+                                        icon: "error",
+                                        button: "OK",
+                                    });
+                                    $(":button").removeAttr("disabled");
+                                }
+                                $body.removeClass("loading");
+                            }
+                        });
+                    }
+                    $(document).ready(function () {
+                        $("#cmbProgramId").select2();
+                        $("#cmbClassId").select2();
+                        $("#cmbInstitutionId").select2();
+                        $("#cmbQualificationId").select2();
+                        $("#cmbSessionId").select2();
+                        $("#cmbCategoryId").select2();
+                        $("#cmbFeeGroupId").select2();
+                        $("#cmbFeeTermId").select2();
+                        $("#cmbJoiningSessionId").select2();
+                        $("#cmbSectionId").select2();
+                        $("#cmbBatchId").select2();
+                        $("#cmbGender").select2();
+                        $("#cmbDomicileId").select2();
+                        $("#cmbReligionId").select2();
+                        $("#cmbCityId").select2();
+                        var status = $("#txtStudentStatus").val();
+                        if (status == "Complete") {
+                            $("#cmbSection").focus();
+                        }
+                        else {
+                            $("#cmbSessionId").focus();
+                        }
+                        $("#imgStudent").change(function () {
+                            var OldImageName = $("#txtImageName").val();
+                            var data = new FormData();
+                            var files = $("#imgStudent").get(0).files;
+                            if (files.length > 0) {
+                                data.append("file", files[0]);
+                                data.append("OldImageName", OldImageName);
+                            }
+                            $.ajax({
+                                url: "/Student/UploadPhoto",
+                                type: "POST",
+                                processData: false,
+                                contentType: false,
+                                data: data,
+                                success: function (result) {
+                                    $("#txtImageName").val(result.ReturnStringValue);
+                                    $("#imgPreview").removeAttr(); //its for clear the history of same name but not working
+                                    $("#imgPreview").attr('src', '/images/StudentPhoto/' + result.ReturnStringValue);
+                                },
+                                error: function (er) {
+                                    alert(er);
+                                }
+                            });
+                        });
+                        $("#cmbClassId").change(function () {
+                            var classId = $(this).val();
+                            $("#cmbFeeGroupId").empty();
+                            $.ajax({
+                                url: '/Student/GetFeeGroupsByClass',
+                                type: 'POST',
+                                data: { ClassId: classId },
+                                dataType: 'json',
+                                contentType: 'application/x-www-form-urlencoded',
+                                success: function (data) {
+                                    var s = '<option value="-1">Select a Fee Group</option>';
+                                    for (var i = 0; i < data.length; i++) {
+                                        s += '<option value="' + data[i].Id + '">' + data[i].GroupName + '</option>';
+                                    }
+                                    $("#cmbFeeGroupId").html(s);
+                                }
+                            });
+                            $.ajax({
+                                url: '/Student/GetSectionsByClass',
+                                type: 'POST',
+                                data: { ClassId: classId },
+                                dataType: 'json',
+                                contentType: 'application/x-www-form-urlencoded',
+                                success: function (data) {
+                                    var s = '<option value="-1">Select Section</option>';
+                                    for (var i = 0; i < data.length; i++) {
+                                        s += '<option value="' + data[i].Id + '">' + data[i].Section + '</option>';
+                                    }
+                                    $("#cmbSectionId").html(s);
+                                }
+                            });
+                            $.ajax({
+                                url: '/Student/GetRegistrationNo',
+                                type: 'POST',
+                                data: { ClassId: classId },
+                                dataType: 'json',
+                                contentType: 'application/x-www-form-urlencoded',
+                                success: function (result) {
+                                    if (result != null) {
+                                        $("#txtRegistrationNo").val(result.ReturnStringValue);
+                                    }
+                                }
+                            });
+                        });
+                        $("#cmbProgramId").change(function () {
+                            var programId = $(this).val();
+                            $.ajax({
+                                url: '/Student/GetClassesByProgram',
+                                type: 'POST',
+                                data: { ProgramId: programId },
+                                dataType: 'json',
+                                contentType: 'application/x-www-form-urlencoded',
+                                success: function (data) {
+                                    var s = '<option value="0">--All Classes--</option>';
+                                    for (var i = 0; i < data.length; i++) {
+                                        s += '<option value="' + data[i].Id + '">' + data[i].Name + '</option>';
+                                    }
+                                    $("#cmbClassId").html(s);
+                                }
+                            });
+                            dataFilter("S");
+                        });
+                    });
+                </script>
+            </div>
+            @*<div class="app-wrapper-footer">
+                    <div class="app-footer">
+                        <div class="app-footer__inner">
+                            <div class="app-footer-left">
+                                <div class="footer-dots">
+
+                                </div>
+                            </div>
+                            <div class="app-footer-right">
+                                <ul class="header-megamenu nav"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+        @*</div>*@
+    </div>
+    <script src="/theme/scripts/main.d810cf0ae7f39f28f336.js"></script>
+    <script src="/Js/bootstrap.min.js"></script>
+</body>
+</html>
+<script src="/Js/select2.js"></script>
+<script src="/Js/sweetalert.min.js"></script>
+<script type="text/javascript">
+    function SwitchBranch(Id) {
+        $.ajax({
+            url: '/Home/ChangeBranchSession',
+            type: 'POST',
+            data: { BranchId: Id },
+            dataType: 'json',
+            contentType: 'application/x-www-form-urlencoded',
+            success: function (result) {
+                if (result.Success) {
+                    location.reload();
+                } else {
+                    alert(result.Message);
+                }
+                $body.removeClass("loading");
+            }
+        });
+    };
+    function OpenOrUpdatIssueTicket(id) {
+        $body.addClass("loading");
+        $.ajax({
+            type: "POST",
+            url: "/HomeSystem/OpenOrUpdateIssueTicket",
+            data: { Id: id },
+            dataType: "html",
+            contentType: 'application/x-www-form-urlencoded',
+            success: function (response) {
+                $('#LargeModalBody').html(response);
+                $body.removeClass("loading");
+            },
+            failure: function (response) {
+                alert(response.responseText);
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        });
+    };
+    $(document).ready(function () {
+        $("#GridDash").load('/Home/GridDashboard');
+        setInterval(function MantenerVivo() {
+            $.ajax({
+                type: "GET",
+                url: "/Home/MantenerConVida",
+                dataType: "json",
+                success: function (response) {
+
+                },
+                failure: function (response) {
+                    alert("failure");
+                }
+            });
+        }, 240000); //Set interval in miliseconds, 4 minutes = 240000
+    });
+</script>  

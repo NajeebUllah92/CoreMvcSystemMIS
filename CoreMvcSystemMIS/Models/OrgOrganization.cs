@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace CoreMvcSystemMIS.Models
+{
+    public partial class OrgOrganization
+    {
+        public int Id { get; set; }
+        public string OrgName { get; set; }
+        public string ShortAddress { get; set; }
+        public string LongAddress { get; set; }
+        public string Email { get; set; }
+        public string MobileNumber { get; set; }
+        public string PhoneNumber { get; set; }
+        public string OrgLogo { get; set; }
+        public string Website { get; set; }
+        public string ReportsTitle { get; set; }
+        public bool? IsActive { get; set; }
+        public string Edate { get; set; }
+        public string Eflage { get; set; }
+        public int? CreatedBy { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public int? UpdatedBy { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool? UseInfoForAllBranches { get; set; }
+        public string KpraNo { get; set; }
+        public string KpraKey { get; set; }
+        public string PayProCode { get; set; }
+        public string OrgCode { get; set; }
+        public bool? IsSkipFromGoverHouse { get; set; }
+        public string FbrApiSandBox { get; set; }
+        public string FbrApiProduction { get; set; }
+        public string DmInvCustType { get; set; }
+        public string DmInvPayType { get; set; }
+        public string DmCustomer { get; set; }
+        public string DmVendor { get; set; }
+        public string DmEmployee { get; set; }
+        public string DmPatients { get; set; }
+        public string DmProductCategory { get; set; }
+        public string DmFnsdCategory { get; set; }
+        public string DmFnsdFood { get; set; }
+        public string DmWard { get; set; }
+        public string DmInvShift { get; set; }
+        public string DmResShift { get; set; }
+        public string DmProduct { get; set; }
+        public string DmDinTable { get; set; }
+        public string DmAccType { get; set; }
+        public string DmAccHead { get; set; }
+        public string DmAccGroup { get; set; }
+        public string DmAccFyear { get; set; }
+        public string DmAccounts { get; set; }
+        public string DmHrmCategory { get; set; }
+        public string DmHrmDepartment { get; set; }
+        public string DmHrmDesignation { get; set; }
+        public string DmBatch { get; set; }
+        public string DmCenter { get; set; }
+        public string DmExamination { get; set; }
+        public string DmFeeItem { get; set; }
+        public string DmFeeTerm { get; set; }
+        public string DmFeeGroup { get; set; }
+        public string DmInstitute { get; set; }
+        public string DmProgram { get; set; }
+        public string DmQualification { get; set; }
+        public string DmReligion { get; set; }
+        public string DmSession { get; set; }
+        public string DmStudentCatgory { get; set; }
+        public string DmSubject { get; set; }
+        public string DmCompany { get; set; }
+        public string DmLocation { get; set; }
+        public string DmUnit { get; set; }
+        public string DmVehicle { get; set; }
+        public string DmWarehouse { get; set; }
+        public string DmThirdPartyCompany { get; set; }
+        public string DmAccMapping { get; set; }
+        public string AccountIntegration { get; set; }
+        public string DmGenDomicile { get; set; }
+        public string DmGenCity { get; set; }
+        public int PayProBankAccountId { get; set; }
+        public string DmFnsdFoodAvailablity { get; set; }
+        public decimal PayProCharges { get; set; }
+        public string DmInsDiscipline { get; set; }
+        public string IsOnlineFormSaveInSections { get; set; }
+        public string IsRequiredLoginForOnlineAdmin { get; set; }
+        public string OrgShortName { get; set; }
+        public string SmsApiUrl { get; set; }
+        public string SmsApiSender { get; set; }
+        public string SmsApiKey { get; set; }
+        public string IsStudentPhotoMandatory { get; set; }
+        public string TechnicalSupportContactNo { get; set; }
+        public string IsShowPayProChallanNoOnBankRecipt { get; set; }
+        public string BankLogo { get; set; }
+        public string IsShowSingleReceiptInPrint { get; set; }
+        public string IsShowBankReceiptInPrint { get; set; }
+        public string IsShowUndertakenInPrint { get; set; }
+        public string BankAccountNo { get; set; }
+        public string PaymentMode { get; set; }
+    }
+}

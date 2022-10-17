@@ -1,0 +1,168 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CMS365</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/login-form/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/login-form/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <link href="~/login-form/styles.css" rel="stylesheet" />
+
+    <link href="~/css/Styles.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />*@
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    @*<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>*@
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+        .footer {
+            margin-top: 170px;
+            background: grey;
+            height: 40px;
+        }
+
+            .footer p {
+                font-size: 16px;
+                margin-left: 17px;
+                margin-top: 20px;
+            }
+    </style>
+</head>
+@{ Layout = null; }
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <div class="login-form">
+                <div class="title">
+                    <img src="/login-form/img/LOGO3.png" alt="car-key" border="0">
+                    <h2 class="text-center">Sign In to Employee Service Portal (ESP)</h2>
+
+                </div>
+                <div class="input-fields">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input id="txtLoginName" name="forgetAnswer" placeholder="User Email" class="form-control" type="text">
+                    </div>
+                </div><br>
+                <div class="input-fields">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input id="txtPassword" name="forgetAnswer" placeholder="Password" class="form-control" type="password">
+                    </div>
+                </div><br>
+                <div class="input-fields">
+                    <div class="form-group">
+                        <button name="btnForget" id="btnLogin" class="btn btn-lg btn-success btn-block btnForget">Sign In</button>
+                    </div>
+                    @*<div class="form-group">
+                            <a class="forgot  text-muted" style="color: #343a40!important;" href="#">Forgot password?</a>
+                        </div>*@
+                    <div class="form-group">
+                        <span id="SpnCapsOn" style="background-color: #FFAA2C;display:none"><strong>Warning!</strong>caps lock is on.</span>
+                    </div>
+                    <div class="form-group">
+                        <span id="txtlabel" style="text-align:center"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="footer">
+        <div class="background">
+      <p>Product of Tech Track || Hmis360.
+        <a href="https://itechtrack.com/" target="_blank">www.itechtrack.com</a>
+      </p>
+      </div>
+    </div>
+     -->
+
+</body>
+</html>
+<div class="modal_waiting">
+</div>
+<script src="~/Js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $body = $("body");
+    checkLogin = function () {
+        var accessfromIp = "";
+        //$.getJSON("https://api.ipify.org/?format=json", function (e) {
+        //    accessfromIp = e.ip;
+        //});
+        var loginname = $("#txtLoginName").val();
+        var Password = $("#txtPassword").val();
+        if (loginname == "" || Password == "") {
+            $("#txtlabel").addClass("error_messege");
+            $("#txtlabel").html("Please Enter User Name and Password");
+            $("#txtLoginName").focus();
+            return;
+        }
+        else {
+            $("#divError").hide();
+            $("#txtlabel").html("");
+        }
+        $body.addClass("loading");
+        $.ajax({
+            url: '@Url.Action("CheckLogin", "Login")',
+            type: 'POST',
+            data: { LoginName: loginname, Password: Password, LastLoginIp: accessfromIp },
+            dataType: 'json',
+            contentType: 'application/x-www-form-urlencoded',
+            success: function (json) {
+                if (json.isRedirect) {
+                    $("#txtlabel").removeClass();
+                    $("#txtlabel").addClass("success_messege");
+                    $("#divLoginSuccess").show();
+                    $("#divError").hide();
+                    $("#txtLoginSuccess").html(json.message);
+                    window.location.href = json.redirectUrl;
+                }
+                else {
+                    $("#divLoginSuccess").hide();
+                    $("#divError").show();
+                    if (json.flage == "error" || json.flage == "NoUser") {
+                        $("#txtlabel").removeClass();
+                        $("#txtlabel").addClass("error_messege");
+                        $("#txtlabel").html(json.message);
+                    }
+                    else {
+                        $("#txtlabel").removeClass();
+                        $("#txtlabel").addClass("warning_messege");
+                        $("#txtlabel").html(json.message);
+                    }
+                    $("#txtLoginName").focus();
+                }
+                $body.removeClass("loading");
+            }
+        });
+    };
+    $(document).ready(function () {
+        $("#txtLoginName").focus();
+        $('#txtPassword, #txtLoginName').keypress(function (e) {
+            var s = String.fromCharCode(e.which);
+            if (s.toUpperCase() === s && s.toLowerCase() !== s && !e.shiftKey) {
+                $('#SpnCapsOn').show();
+            }
+            else {
+                $('#SpnCapsOn').hide();
+            }
+        });
+        $("#btnLogin").click(function () {
+            checkLogin();
+        })
+        $("#txtPassword").keyup(function (event) {
+            if (event.keyCode == 13) {
+                checkLogin();
+            }
+        });
+        $("#txtLoginName").keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#txtPassword").focus();
+            }
+        });
+    })
+</script>

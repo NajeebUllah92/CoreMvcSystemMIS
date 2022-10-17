@@ -1,0 +1,139 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<style>
+    #mainTbl tr {
+        height: 30px;
+    }
+
+    .Tdlbl {
+        width: 15%;
+    }
+
+    .TdData {
+        width: 35%;
+        font-weight: bold;
+        font-style: italic;
+    }
+</style>
+<nav class="" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Course</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Course Detail</li>
+    </ol>
+</nav>
+<div class="mb-3 card">
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            2018-KMU-NMC-1
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <table style="width:100%; margin-top:15px; margin-bottom:15px" id="mainTbl">
+            <tr>
+                <td class="Tdlbl">Student Name:</td>
+                <td class="TdData"><u>Amir Khan</u></td>
+                <td class="Tdlbl">Father's Name:</td>
+                <td class="TdData"><u>Zameen Khan</u></td>
+                <td rowspan="4">
+                    <img src="~/Content/Template/images/avatars/12.jpg" style="height:120px; width:120px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Gender:</td>
+                <td class="TdData"><u>Male</u></td>
+                <td class="Tdlbl">Date Of Birth:</td>
+                <td class="TdData"><u>02-07-2000</u></td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Nationality:</td>
+                <td class="TdData"><u>Pakistani</u></td>
+                <td class="Tdlbl">Religion:</td>
+                <td class="TdData"><u>Islam</u></td>
+            </tr>
+            <tr>
+                <td class="Tdlbl">Student Contact:</td>
+                <td class="TdData"><u>03109639703</u></td>
+                <td class="Tdlbl">Guardian's Contact:</td>
+                <td class="TdData"><u>03109639703</u></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="main-card mb-3 card">
+    <div class="card-header">
+        <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i> 104-Islamyat
+        <div class="btn-actions-pane-right">
+            <div class="nav">
+                <a data-toggle="tab" href="#tab-eg2-0" class="btn-pill btn-wide active btn btn-outline-alternate btn-sm">Quiz/Assignment</a>
+                <a data-toggle="tab" href="#tab-eg2-1" class="btn-pill btn-wide mr-1 ml-1  btn btn-outline-alternate btn-sm">Online Examination</a>
+                <a data-toggle="tab" href="#tab-eg2-2" class="btn-pill btn-wide  btn btn-outline-alternate btn-sm">Hand Outs</a>
+                <a data-toggle="tab" href="#tab-eg2-3" class="btn-pill btn-wide btn btn-outline-alternate btn-sm">Syllabus</a>
+                <a data-toggle="tab" href="#tab-eg2-4" class="btn-pill btn-wide mr-1 ml-1  btn btn-outline-alternate btn-sm">General Discussion Board</a>
+                <a data-toggle="tab" href="#tab-eg2-5" class="btn-pill btn-wide  btn btn-outline-alternate btn-sm">Lecture Lessons</a>
+                <a data-toggle="tab" href="#tab-eg2-6" class="btn-pill btn-wide  btn btn-outline-alternate btn-sm">My Queries</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-eg2-0" role="tabpanel">
+                <p>
+                    No data found against Quiz/Assigmnet.
+                </p>
+            </div>
+            <div class="tab-pane" id="tab-eg2-1" role="tabpanel">
+                <p>
+                    No data found against online Examination.
+                </p>
+            </div>
+            <div class="tab-pane" id="tab-eg2-2" role="tabpanel">
+                <p>
+                    No data found against Hand Outs
+                </p>
+            </div>
+            <div class="tab-pane" id="tab-eg2-3" role="tabpanel">
+                <p>
+                    No data found against Syllabus
+                </p>
+            </div>
+            <div class="tab-pane" id="tab-eg2-4" role="tabpanel">
+                <p>
+                    No data found against General Discussion Board
+                </p>
+            </div>
+            <div class="tab-pane" id="tab-eg2-5" role="tabpanel">
+                <p>
+                    No data found against Lecture Lessons
+                </p>
+            </div>
+            <div class="tab-pane" id="tab-eg2-6" role="tabpanel">
+                <p>
+                    No data foundMy against Queries
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="d-block text-right card-footer">
+        @*<a href="javascript:void(0);" class="btn-wide btn btn-success">Save</a>*@
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#li1").removeClass("mm-active");
+        $("#li2").addClass("mm-active");
+        $("#li3").removeClass("mm-active");
+        $("#li4").removeClass("mm-active");
+        $("#li5").removeClass("mm-active");
+        $("#li6").removeClass("mm-active");
+        $("#li7").removeClass("mm-active");
+        $("#li8").removeClass("mm-active");
+        $("#li9").removeClass("mm-active");
+        $("#li10").removeClass("mm-active");
+        $("#li11").removeClass("mm-active");
+        $("#li12").removeClass("mm-active");
+    });
+</script>

@@ -1,0 +1,268 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="~/Attendencedropdown.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+@*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+<!------ Include the above in your HEAD tag ---------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    tr {
+        height: 30px;
+    }
+
+    .Tdlbl {
+        width: 10%;
+        font-weight: bold;
+        padding-left: 5%;
+    }
+
+    .TdData {
+        width: 20%;
+        font-weight: bold;
+        font-style: normal;
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        color: black;
+    }
+
+    label {
+        background-color: white;
+        height: 100%;
+        width: 10%;
+        font-weight: bold;
+        font-size: 18px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        padding: 0px;
+    }
+</style>
+<nav class="" aria-label="breadcrumb" style="margin-bottom:1px; margin-top:1px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Employee</a></li>
+        <li class="active breadcrumb-item" aria-current="page">Attendance Sheet</li>
+    </ol>
+</nav>
+<div><h6 style="margin-bottom:0px;"><b>Registration No : </b><label id="lblregistrationno" style="font-family:Cambria;">12345</label></h6></div>
+<div class="mb-3 card">
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Search by
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="overflow-x: auto;padding-right:30px;padding-left:30px;">
+            <table style="width:100%; margin-top:15px; margin-bottom:15px;">
+                <tr>
+                    <td class="Tdlbl"><u>Colleges/University</u></td>
+                    <td class="TdData">
+                        <select class="form-control select2">
+                            <option selected>KKK University Karak</option>
+                            <option>Khyber Medical College (KMC) Peshawar</option>
+                        </select>
+                    </td>
+                    <td class="Tdlbl">Program</td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="volvo" selected>- View All -</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="computerscience">Computer Science</option>
+                            <option value="biotechnology">Bio-Technology</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl"><u>Sem/ Year</u></td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="all" selected>- View All -</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                            <option value="five">5</option>
+                            <option value="six">6</option>
+                            <option value="seven">7</option>
+                            <option value="eight">8</option>
+                            <option value="nine">9</option>
+                            <option value="ten">10</option>
+                        </select>
+                    </td>
+                    <td class="Tdlbl"><u>Teacher</u></td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="volvo" selected>View All</option>
+                            <option value="siqaf">Muhammad Siqaf</option>
+                            <option value="najeeb">Najeeb Ullah</option>
+                            <option value="hamid">Hamid</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl"><u>Status</u></td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="volvo" selected>- View All -</option>
+                            <option value="pending">Pending</option>
+                            <option value="marked"style="color:green">Marked</option>
+                            <option value="cancelled"style="color:red">Cancelled</option>
+                        </select>
+                    </td>
+                    <td class="Tdlbl"><u>Subject</u></td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="volvo">- View All -</option>
+                            <option value="c++">C++</option>
+                            <option value="oop">OOP</option>
+                            <option value="itroductiontocomputer">Introduction to Computer</option>
+                            <option value="calculus">Calculus</option>
+                            <option value="datastructure">Data Structure</option>
+                            <option value="dld">DLD</option>
+                            <option value="management">Management</option>
+                            <option value="islamiat">Islamiat</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl"><u>From Date</u></td>
+                    <td class="TdData">
+                        <input type="date" class="form-control" />
+                    </td>
+                    <td class="Tdlbl"><u>To Date</u></td>
+                    <td class="TdData">
+                        <input type="date" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Tdlbl"><u>Subject Group</u></td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="volvo" selected>- View All -</option>
+                            <option value="saab">BATCH-A</option>
+                            <option value="opel">BATCH-B</option>
+                            <option value="audi">BATCH-C</option>
+                            <option value="audi">BATCH-1</option>
+                            <option value="audi">BATCH-2</option>
+                            <option value="audi">BATCH-3</option>
+                            <option value="audi">BATCH-4</option>
+                            <option value="audi">BATCH-5</option>
+                            <option value="audi">BATCH-6</option>
+                            <option value="audi">BATCH-7</option>
+                        </select>
+                    </td>
+                    <td class="Tdlbl"><u>Server Url</u></td>
+                    <td class="TdData">
+                        <select name="type" class="form-control select2">
+                            <option value="online"selected>Online</option>
+                            <option value="local">Local</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="margin-left:10px;">
+                        <button style="width: 20%;text-align:center;float:right;"><i class="fa-solid fa-check-circle"></i>View</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+            <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+            Attendance Table
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div style="overflow-x: auto;">
+            <table class="table-primary table-bordered bg-white" style="width:100%;" id="attendencetable">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Sheet No</th>
+                        <th>Date</th>
+                        <th>Program</th>
+                        <th>Teacher</th>
+                        <th>Subject</th>
+                        <th>Ses Name</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                        <th>Mark</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>225-44</td>
+                        <td>28-Apr-2022</td>
+                        <td>BSCS (Hons)</td>
+                        <td>Muhammad Siqaf</td>
+                        <td>Data Structure</td>
+                        <td>2021-22</td>
+                        <td>60 Min</td>
+                        <td class="font-weight-bold" id="Mark">Marked In-Active</td>
+                        <td>JAVED ULLAH</td>
+                        <td><i class="fa-solid fa-marker" style="color:green;"> Mark</i> <i class="fa-solid fa-print" style="color:blue;"> Print</i> <i class="fa-regular fa-trash-can" style="color:red;"> Remove</i></td>
+                        <td><i class="fa-solid fa-upload" style="color:darkgreen"> Upload</i> <i class="fa-solid fa-check" style="color:darkblue"> Repeat</i></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>225-44</td>
+                        <td>28-Apr-2022</td>
+                        <td>BSCS (Hons)</td>
+                        <td>Najeeb Ullah</td>
+                        <td>Calculus</td>
+                        <td>2021-22</td>
+                        <td>60 Min</td>
+                        <td class="font-weight-bold" id="Mark">Marked In-Active</td>
+                        <td>ARQAM AZIZ</td>
+                        <td><i class="fa-solid fa-marker" style="color:green;"> Mark</i> <i class="fa-solid fa-print" style="color:blue;"> Print</i> <i class="fa-regular fa-trash-can" style="color:red;"> Remove</i></td>
+                        <td><i class="fa-solid fa-upload" style="color:darkgreen"> Upload</i> <i class="fa-solid fa-check" style="color:darkblue"> Repeat</i></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>225-44</td>
+                        <td>28-Apr-2022</td>
+                        <td>BSCS (Hons)</td>
+                        <td>Muhammad Fida</td>
+                        <td>Intro to computer science</td>
+                        <td>2021-22</td>
+                        <td>60 Min</td>
+                        <td class="font-weight-bold" id="Mark">Marked In-Active</td>
+                        <td>MUHAMMAD ATIF</td>
+                        <td><i class="fa-solid fa-marker" style="color:green;"> Mark</i> <i class="fa-solid fa-print" style="color:blue;"> Print</i> <i class="fa-regular fa-trash-can" style="color:red;"> Remove</i></td>
+                        <td><i class="fa-solid fa-upload" style="color:darkgreen"> Upload</i> <i class="fa-solid fa-check" style="color:darkblue"> Repeat</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#li1").addClass("mm-active");
+        $("#li2").removeClass("mm-active");
+        $("#li3").removeClass("mm-active");
+        $("#li4").removeClass("mm-active");
+        $("#li5").removeClass("mm-active");
+        $("#li6").removeClass("mm-active");
+        $("#li7").removeClass("mm-active");
+        $("#li8").removeClass("mm-active");
+        $("#li9").removeClass("mm-active");
+        $("#li10").removeClass("mm-active");
+        $("#li11").removeClass("mm-active");
+        $("#li12").removeClass("mm-active");
+    });
+</script>
+<script>
+    $('.select2').select2();
+</script>
+
+
+

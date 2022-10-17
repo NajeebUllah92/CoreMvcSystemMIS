@@ -1,0 +1,88 @@
+﻿.select2-container .select2-selection--single {
+    height: 34px !important;
+}
+
+.select2-container .select2-selection--single {
+    border: 1px solid #ccc !important;
+    border-radius: 0px !important;
+}
+#attendencetable thead tr th {
+    height:40px;
+    font-size:13px;
+    font-weight:700;
+    text-align:center;
+    /*background-color:lightsteelblue;*/
+    border:none;
+}
+#attendencetable tbody tr td {
+    height: 30px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+    #attendencetable tbody tr td i{
+        font-size:12px;
+    }
+    #Mark {
+        color: green;
+    }
+button{
+    /*background-color:red;*/
+    border:1.5px solid black;
+}
+    button:hover {
+        background-color:lightgray;
+        color:blue;
+    }
+    tfoot{
+        line-height:15px;
+    }
+    table tr td button{
+        border:none;
+        background-color:cornflowerblue;
+        color:white;
+        float:right;
+        height:35px;
+        border-radius:5px;
+    }
+        table tr td button:hover {
+            background-color: cornflowerblue;
+            opacity: 80%;
+            color: white;
+        }
+@media only screen and (max-width: 1500px)(min-width: 1101px) {
+    tfoot tr td .row input {
+        max-width: 100%;
+        min-width: 100%;
+        float: right;
+        margin-left: 1px;
+    }
+
+}
+@media only screen and (max-width: 1200px)(min-width: 768px) {
+    tfoot tr td .row input {
+        max-width: 50%;
+        min-width: 40%;
+        float: right;
+        margin-left: 1px;
+    }
+    table tr td{
+        width:100%
+    }
+}
+@media only screen and (max-width: 767px)(min-width: 400px) {
+    tfoot tr td .row input {
+        max-width: 100%;
+        min-width: 50%;
+        float: right;
+        margin-left: 1px;
+    }
+}
+@media only screen and (max-width: 399px)(min-width: 300px) {
+    tfoot tr td .row input {
+        max-width: 100%;
+        min-width: 40%;
+        float: right;
+        margin-left: 1px;
+    }
+}
