@@ -53,7 +53,7 @@ namespace CoreMvcSystemMIS.Controllers
         }
         public IActionResult MarkSheet()
         {
-            return View();
+            return View("Index");
         }
         public IActionResult AttendencePrint()
         {
